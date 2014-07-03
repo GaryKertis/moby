@@ -70,7 +70,7 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 96%;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -122,7 +122,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 h1, .h1 {
 	font-size: 2.5em;
-	line-height: 1.333em;
+	line-height: 1;
 }
 
 h2, .h2 {
@@ -151,15 +151,32 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 
+@font-face {font-family:"AntiqueOliveW01-Compact";src:url("http://fast.fonts.net/dv2/2/88772fdf-3d8b-4d1f-b367-430adb7df853.eot?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4");src:url("http://fast.fonts.net/dv2/2/88772fdf-3d8b-4d1f-b367-430adb7df853.eot?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4#iefix") format("embedded-opentype"),url("http://fast.fonts.net/dv2/3/e14f2ed7-5819-4ea6-a282-4b9ddc4eb277.woff?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4") format("woff"),url("http://fast.fonts.net/dv2/1/0b6c7f2b-b8ba-4fc8-947c-9997e9900cbb.ttf?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4") format("truetype"),url("http://fast.fonts.net/dv2/11/97a48e2f-6344-4a90-b3c8-1a7d2b2b9824.svg?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4#97a48e2f-6344-4a90-b3c8-1a7d2b2b9824") format("svg");}
+
 .header {
-	background-color: $black;
+	background-color: $white;
+	width: 100%;
+	text-align: center;
+	font-family:"AntiqueOliveW01-Compact";
 }
+
+
 
 	#logo {
 		margin: 0.75em 0;
+		text-align: center;
 
-		a {
-			color: $white;
+
+		.red {
+			color: $red;
+			font-size: 8vmax;
+			margin-bottom: 10px!important;
+		}
+
+		.blue {
+			color: $blue;
+			font-size: 8.098vmax;
+
 		}
 	}
 
@@ -251,14 +268,14 @@ POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	margin-top: 1.5em;
+	//margin-top: 1.5em;
 }
 
-		.hentry {
-			background-color: $white;
+		.post_wrapper {
+			background-color: $gray;
 			border-radius: 3px;
 			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
+			//border: 1px solid $border-color;
 
 			header {
 				border-bottom: 1px solid $light-gray;
@@ -292,7 +309,7 @@ POSTS & CONTENT STYLES
 
 		/* want to style individual post classes? Booya! */
 		.post-id {}         /* post by id (i.e. post-3) */
-		.post {}            /* general post style */
+		.post {margin: auto}            /* general post style */
 		.page {}            /* general article on a page style */
 		.attachment {}      /* general style on an attatchment */
 		.sticky {}          /* sticky post style */

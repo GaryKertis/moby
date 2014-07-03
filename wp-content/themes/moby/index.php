@@ -7,7 +7,8 @@
 						<div id="main" class="m-all cf" role="main">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
+							<canvas id="waves" class="waves" width="100%" height="100px"></canvas>
+							<div class="post_wrapper">
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
 
 								<header class="article-header">
@@ -37,7 +38,7 @@
 								</footer>
 
 							</article>
-
+						</div>
 							<?php endwhile; ?>
 
 									<?php bones_page_navi(); ?>

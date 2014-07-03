@@ -30,6 +30,29 @@
 		<?php wp_footer(); ?>
 		<script type="text/javascript">
     		var s = skrollr.init();
+    		jQuery('.waves').each(function(index, canvas) {
+    		 canvas.width = document.body.clientWidth;
+    		 canvas.height = 50;
+    		 context = canvas.getContext('2d');
+	
+		    context.lineWidth = 1;
+
+		    context.fillStyle = 'white';
+		   	var x = 0;
+    		var y = -71;
+    		var radius = 100;
+    		var startAngle = 0.25 * Math.PI;
+    		var endAngle = 0.75 * Math.PI;
+
+    		for (i=0;i<canvas.width;i++) {
+
+    		context.beginPath();
+    		context.arc(x, y, radius, startAngle, endAngle, false);
+    		context.fill();
+			x += (radius+40);
+    	}
+    });
+
     	</script>
 	</body>
 
