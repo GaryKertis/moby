@@ -27,15 +27,15 @@ $black:             #323944;
 $white:             #fff;
 
 $light-gray:        #f8f9fa;
-$gray:              rgb(182,207,208);
-$text-color:        #5c6b80;
+$gray:              rgba(182,207,208,0.5);
+$text-color:        $black;
 $meta-gray:         #9fa6b4;
 
 $tan:               #eceee5;
 
 $green:             #7dd667;
 
-$bones-pink:        #f01d4f;
+$bones-pink:        $red;
 $blue:              #2980b9;
 
 $link-color:        $bones-pink;

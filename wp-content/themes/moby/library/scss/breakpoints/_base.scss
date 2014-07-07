@@ -16,11 +16,11 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $lato;
+	font-family: $gill;
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
-	background-color: $gray;
+	//background-color: $gray;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -151,8 +151,6 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 
-@font-face {font-family:"AntiqueOliveW01-Compact";src:url("http://fast.fonts.net/dv2/2/88772fdf-3d8b-4d1f-b367-430adb7df853.eot?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4");src:url("http://fast.fonts.net/dv2/2/88772fdf-3d8b-4d1f-b367-430adb7df853.eot?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4#iefix") format("embedded-opentype"),url("http://fast.fonts.net/dv2/3/e14f2ed7-5819-4ea6-a282-4b9ddc4eb277.woff?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4") format("woff"),url("http://fast.fonts.net/dv2/1/0b6c7f2b-b8ba-4fc8-947c-9997e9900cbb.ttf?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4") format("truetype"),url("http://fast.fonts.net/dv2/11/97a48e2f-6344-4a90-b3c8-1a7d2b2b9824.svg?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4#97a48e2f-6344-4a90-b3c8-1a7d2b2b9824") format("svg");}
-
 .header {
 	background-color: $white;
 	width: 100%;
@@ -160,6 +158,9 @@ HEADER STYLES
 	font-family:"AntiqueOliveW01-Compact";
 }
 
+.waves {
+	margin-bottom: -7px;
+}
 
 
 	#logo {
@@ -200,7 +201,7 @@ and more scalable.
 
 		a {
 			display: block;
-			color: $white;
+			color: $black;
 			text-decoration: none;
 			padding: 0.75em;
 
@@ -278,8 +279,8 @@ POSTS & CONTENT STYLES
 			//border: 1px solid $border-color;
 
 			header {
-				border-bottom: 1px solid $light-gray;
-				padding: 1.5em;
+				//border-bottom: 1px solid $light-gray;
+				//padding: 1.5em;
 			}
 
 			footer {
@@ -297,6 +298,10 @@ POSTS & CONTENT STYLES
 		.page-title,
 		.entry-title {
 			margin: 0;
+
+			a, a:visited {
+			font-family: $galliard;
+			}
 		}
 
 		.single-title {}
@@ -328,7 +333,7 @@ POSTS & CONTENT STYLES
 
 		/* entry content */
 		.entry-content {
-			padding: 1.5em 1.5em 0;
+			//padding: 1.5em 1.5em 0;
 
 			p {
 				margin: 0 0 1.5em;
