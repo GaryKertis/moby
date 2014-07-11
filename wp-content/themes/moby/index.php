@@ -7,13 +7,14 @@
 						<div id="main" class="m-all cf" role="main">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							<div id="post-<?php the_ID(); ?>" class="mywaves">
 							<canvas id="waves" class="waves" width="100%" height="100px"></canvas>
 							<div class="post_wrapper">
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
 
 								<header class="article-header">
 
-									<h1 class="h1 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+									<h1 class="h1 entry-title"><?php the_title(); ?></h1>
 									<!-- <p class="byline vcard">
 										<?php // printf( __( 'Posted', 'bonestheme' ) . ' <time class="updated" datetime="%1$s" pubdate>%2$s</time> ' . __('by', 'bonestheme' ) . ' <span class="author">%3$s</span>', get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
 									</p> -->
@@ -40,6 +41,7 @@
 
 							</article>
 						</div>
+						</div>
 							<?php endwhile; ?>
 
 									<?php bones_page_navi(); ?>
@@ -61,8 +63,8 @@
 							<?php endif; ?>
 
 
-						</div>
-
+						
+					</div>
 					<?php if (!is_front_page()) {
 						get_sidebar();
 					} ?>

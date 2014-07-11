@@ -43,7 +43,10 @@
 
 		<div id="container">
 
-			<nav role="navigation">
+
+
+			<header class="header" role="banner">
+							<nav role="navigation" class="navigation">
 						<?php wp_nav_menu(array(
     					'container' => false,                           // remove nav container
     					'container_class' => 'menu cf',                 // class of container (should you choose to use it)
@@ -59,8 +62,6 @@
 						)); ?>
 
 					</nav>
-
-			<header class="header" role="banner">
 
 				<div id="inner-header" class="wrap cf">
 

@@ -29,12 +29,24 @@
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
 		<script type="text/javascript">
+
+            jQuery( window ).resize(function() {
+                setSizes();
+            });
+
+            
     		var s = skrollr.init();
+
+            function setSizes() {
+            jQuery('#content').css('margin-top',jQuery('.header').height());
     		jQuery('.waves').each(function(index, canvas) {
     		 canvas.width = document.body.clientWidth;
     		 canvas.height = 50;
     		 context = canvas.getContext('2d');
 			 context.globalCompositeOperation = 'source-out';
+             console.log(jQuery('this').next().attr('class'));
+             context.fillStyle = jQuery(this).next().css('background-color');
+
 			 
 		    context.lineWidth = 1;
 
@@ -53,11 +65,12 @@
     	}
     	context.closePath();
     	context.fill();
-		context.fillStyle = 'rgba(182,207,208,0.5)';
 		context.fillRect(0,0,canvas.width,canvas.height);
 		
 
-    });
+        });
+        }
+        setSizes();
 
     	</script>
 	</body>

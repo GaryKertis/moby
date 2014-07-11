@@ -156,12 +156,27 @@ HEADER STYLES
 	width: 100%;
 	text-align: center;
 	font-family:"AntiqueOliveW01-Compact";
+	position: fixed;
+	z-index: -10;
+	top: 0px;
+}
+
+.mywaves:nth-child(1n) .post_wrapper {
+	background-color: $gray;
+}
+
+.mywaves:nth-child(2n) .post_wrapper {
+	background-color: darken($gray, 10%);
+}
+
+
+.mywaves {
+	margin-bottom: -50px;
 }
 
 .waves {
 	margin-bottom: -7px;
 }
-
 
 	#logo {
 		margin: 0.75em 0;
@@ -272,10 +287,12 @@ POSTS & CONTENT STYLES
 	//margin-top: 1.5em;
 }
 
+
+
 		.post_wrapper {
-			background-color: $gray;
 			border-radius: 3px;
-			margin-bottom: 1.5em;
+			padding-bottom: 50px;
+			//margin-bottom: 1.5em;
 			//border: 1px solid $border-color;
 
 			header {
@@ -298,6 +315,8 @@ POSTS & CONTENT STYLES
 		.page-title,
 		.entry-title {
 			margin: 0;
+			font-family: $galliard;
+			color: $red;
 
 			a, a:visited {
 			font-family: $galliard;
