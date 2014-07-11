@@ -34,7 +34,18 @@
                 setSizes();
             });
 
-            
+            jQuery(window).scroll(function(){
+                var newPos = jQuery(window).scrollTop();
+                
+                //console.log(newPos);
+                jQuery('.header').css('-webkit-transform', 'translate3d(0px,'+newPos+'px,0px)');
+                jQuery('.mywaves').each(function(index, canvas) {
+                postPos = index*newPos*-1;
+                console.log(postPos);
+                    jQuery(this).css('-webkit-transform', 'translate3d(0px,'+postPos+'px,0px)');
+                });
+            });
+
     		var s = skrollr.init();
 
             function setSizes() {
@@ -44,7 +55,6 @@
     		 canvas.height = 50;
     		 context = canvas.getContext('2d');
 			 context.globalCompositeOperation = 'source-out';
-             console.log(jQuery('this').next().attr('class'));
              context.fillStyle = jQuery(this).next().css('background-color');
 
 			 
