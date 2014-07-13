@@ -8,7 +8,7 @@
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 							<div id="post-<?php the_ID(); ?>" class="mywaves">
-							<canvas id="waves" class="waves" width="100%" height="100px"></canvas>
+							<canvas id="waves-<?php the_ID(); ?>" class="waves" width="100%" height="100px"></canvas>
 							<div class="post_wrapper">
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
 
@@ -40,6 +40,7 @@
 								</footer> -->
 
 							</article>
+							<canvas id="whale-<?php the_ID(); ?>" class="whale" width="100%" height="200px"></canvas>
 						</div>
 						</div>
 							<?php endwhile; ?>

@@ -23,7 +23,6 @@
 				</div>
 
 			</footer> -->
-                <canvas id="whale"></canvas>
 
 		</div>
 
@@ -31,33 +30,31 @@
 		<?php wp_footer(); ?>
 		<script type="text/javascript">
 
+            var whale; 
 
-            jQuery( window ).resize(function() {
+            jQuery(window).resize(function () {
                 setSizes();
             });
 
-            jQuery(window).scroll(function(){
+            jQuery(window).scroll(function () {
                 var newPos = jQuery(window).scrollTop();
-                whalePos = -newPos*.5;
-                
-                jQuery('.header').css('-webkit-transform', 'translate3d(0px,'+newPos+'px,0px)');
-                jQuery('#whale').css('-webkit-transform', 'translate3d(0px,'+whalePos+'px,0px)');
-                jQuery('.mywaves').each(function(index, canvas) {
+                replaceHeader();
+                whalePos = -newPos * .5;
 
+                jQuery('.header').css('-webkit-transform', 'translate3d(0px,' + newPos + 'px,0px)');
+                //jQuery('#whale').css('-webkit-transform', 'translate3d(0px,' + whalePos + 'px,0px)');
+                jQuery('.mywaves').each(function (index, canvas) {
 
-                    replaceHeader();
+                    postPos = newPos/3;
 
-                    postPos = 1/-(index+1)*newPos;
-
-                    jQuery(this).css('-webkit-transform', 'translate3d(0px,'+postPos+'px,0px)');
+                    //jQuery(this).css('-webkit-transform', 'translate3d(0px,'+postPos+'px,0px)');
+                    makeTail(jQuery(this).find('.whale').get(0),postPos);
                 });
             });
 
-    		var s = skrollr.init();
-
             function replaceHeader() {
-                currentPos = jQuery('#main').offset().top-jQuery('.navigation').height();
-                if (!jQuery('#inner-header').hasClass('whaletale') && jQuery('.header').offset().top > currentPos)  {
+                currentPos = jQuery('#main').offset().top;
+                if (!jQuery('#inner-header').hasClass('whaletale') && jQuery('.header').offset().top > currentPos) {
                     console.log('changed to whale tale');
                     jQuery('#inner-header').addClass('whaletale')
                 } else if (jQuery('#inner-header').hasClass('whaletale') && jQuery('.header').offset().top <= currentPos) {
@@ -67,68 +64,68 @@
             }
 
             function setSizes() {
-            jQuery('#content').css('margin-top',jQuery('.header').height()+jQuery('.navigation').height());
-            jQuery('.post_wrapper').css('min-height', jQuery(window).height()*.5);
-    		jQuery('.waves').each(function(index, canvas) {
-    		 canvas.width = document.body.clientWidth;
-    		 canvas.height = 50;
-    		 context = canvas.getContext('2d');
-			 context.globalCompositeOperation = 'source-out';
-             context.fillStyle = jQuery(this).next().css('background-color');
+                jQuery('#content').css('margin-top', jQuery('.header').height() + jQuery('.navigation').height());
 
-			 
-		    context.lineWidth = 1;
-
-		    //context.fillStyle = 'rgb(182,207,208)';
-		   	var x = 0;
-    		var y = -71;
-    		var radius = 100;
-    		var startAngle = 0.25 * Math.PI;
-    		var endAngle = 0.75 * Math.PI;
-			context.beginPath();
-    		for (i=0;i<canvas.width;i++) {
-
-    		
-    		context.arc(x, y, radius, startAngle, endAngle, false);
-			x += (radius+40);
-    	}
-    	context.closePath();
-    	context.fill();
-		context.fillRect(0,0,canvas.width,canvas.height);
-		
-
-        });
+                jQuery('.waves').each(function (index, canvas) {
+                    canvas.width = document.body.clientWidth;
+                    canvas.height = 50;
+                    context = canvas.getContext('2d');
+                    context.globalCompositeOperation = 'source-out';
+                    context.fillStyle = jQuery(this).next().css('background-color');
 
 
-             whale = document.getElementById('whale');
-             whale.style.top = jQuery('#content').offset().top +50+ 'px'; 
-             width = document.body.clientWidth;
-             height = window.innerHeight;
-             whale.width = width;
-             whale.height = height;
-             centerX = whale.width/2;
-             centerY = whale.height/2;
-             context = whale.getContext('2d');
-               context.beginPath();
-  
-    context.moveTo(centerX, centerY - height/2); // A1
-  
-  context.bezierCurveTo(
-    centerX + width/4, centerY - height/2, // C1
-    centerX + width/4, centerY + height/2, // C2
-    centerX, centerY + height/2); // A2
+                    context.lineWidth = 1;
 
-  context.bezierCurveTo(
-    centerX - width/4, centerY + height/2, // C3
-    centerX - width/4, centerY - height/2, // C4
-    centerX, centerY - height/2); // A1
- 
-  context.fillStyle = "red";
-  context.fill();
-  context.closePath();  
+                    //context.fillStyle = 'rgb(182,207,208)';
+                    var x = 0;
+                    var y = -71;
+                    var radius = 100;
+                    var startAngle = 0.25 * Math.PI;
+                    var endAngle = 0.75 * Math.PI;
+                    context.beginPath();
+                    for (i = 0; i < canvas.width; i++) {
 
-        }
-        setSizes();
+
+                        context.arc(x, y, radius, startAngle, endAngle, false);
+                        x += (radius + 40);
+                    }
+                    context.closePath();
+                    context.fill();
+                    context.fillRect(0, 0, canvas.width, canvas.height);
+
+
+                });
+
+            }
+
+            function makeTail(canvas,postPos) {
+                whale = canvas;
+                console.log(postPos);
+                width = document.body.clientWidth;
+                whale.width = width;
+                height = whale.height;
+                centerX = whale.width / 2;
+                centerY = whale.height / 2;
+                context = whale.getContext('2d');
+                context.beginPath();
+
+                context.moveTo(centerX, centerY - height / 2 + postPos); // A1
+
+                context.bezierCurveTo(
+                    centerX + width / 4, centerY - height / 2 + postPos, // C1
+                    centerX + width / 4, centerY + height / 2 + postPos, // C2
+                    centerX, centerY + height / 2 + postPos); // A2
+
+                context.bezierCurveTo(
+                    centerX - width / 4, centerY + height / 2 + postPos, // C3
+                    centerX - width / 4, centerY - height / 2 + postPos, // C4
+                    centerX, centerY - height / 2 + postPos); // A1
+
+                context.fillStyle = "red";
+                context.fill();
+                context.closePath();
+            }
+            setSizes();
 
     	</script>
 	</body>
