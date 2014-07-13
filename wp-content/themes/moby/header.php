@@ -43,10 +43,7 @@
 
 		<div id="container">
 
-
-
-			<header class="header" role="banner">
-							<nav role="navigation" class="navigation">
+			<nav role="navigation" class="navigation">
 						<?php wp_nav_menu(array(
     					'container' => false,                           // remove nav container
     					'container_class' => 'menu cf',                 // class of container (should you choose to use it)
@@ -63,6 +60,8 @@
 
 					</nav>
 
+			<header class="header" role="banner">
+
 				<div id="inner-header" class="wrap cf">
 
 					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
@@ -71,5 +70,4 @@
 						<span class="nyc">NYC</span></p>
 
 				</div>
-
 			</header>

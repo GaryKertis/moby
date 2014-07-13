@@ -1313,19 +1313,19 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #ff4d31;
+  color: #323944;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #ff2503; }
+    color: #1f232a; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.
     so it basically works like the :hover selector
     for mobile devices.
     */
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+    -webkit-tap-highlight-color: #dae6e7; }
 
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
@@ -1373,7 +1373,14 @@ HEADER STYLES
   font-family: "AntiqueOliveW01-Compact";
   position: fixed;
   z-index: -10;
-  top: 0px; }
+  top: 48px; }
+
+.navigation {
+  top: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 100000;
+  background-color: white; }
 
 .mywaves:nth-child(1n) .post_wrapper {
   background-color: #dae6e7; }
@@ -1383,6 +1390,13 @@ HEADER STYLES
 
 .mywaves {
   margin-bottom: -50px; }
+
+.whaletale {
+  visibility: hidden; }
+
+#whale {
+  position: fixed;
+  z-index: -10; }
 
 .waves {
   margin-bottom: -7px; }

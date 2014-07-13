@@ -98,7 +98,7 @@ a, a:visited {
 		so it basically works like the :hover selector
 		for mobile devices.
 		*/
-		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+		-webkit-tap-highlight-color : $gray;
 	}
 }
 
@@ -158,9 +158,17 @@ HEADER STYLES
 	font-family:"AntiqueOliveW01-Compact";
 	position: fixed;
 	z-index: -10;
-	top: 0px;
+	top: 48px;
 }
 
+
+.navigation {
+	top: 0px;
+	position: fixed;
+	width: 100%;
+	z-index: 100000;
+	background-color: $white;
+}
 .mywaves:nth-child(1n) .post_wrapper {
 	background-color: $gray;
 }
@@ -170,8 +178,17 @@ HEADER STYLES
 }
 
 
-.mywaves {
+.mywaves { 
 	margin-bottom: -50px;
+}
+
+.whaletale {
+	visibility: hidden;
+}
+
+#whale {
+	position: fixed;
+	z-index: -10;
 }
 
 .waves {
