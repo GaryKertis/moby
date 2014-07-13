@@ -39,13 +39,12 @@
             jQuery(window).scroll(function () {
                 var newPos = jQuery(window).scrollTop();
                 replaceHeader();
-                whalePos = -newPos * .5;
 
                 jQuery('.header').css('-webkit-transform', 'translate3d(0px,' + newPos + 'px,0px)');
                 //jQuery('#whale').css('-webkit-transform', 'translate3d(0px,' + whalePos + 'px,0px)');
                 jQuery('.mywaves').each(function (index, canvas) {
 
-                    postPos = newPos/3;
+                    postPos = newPos/(index+1+index);
 
                     //jQuery(this).css('-webkit-transform', 'translate3d(0px,'+postPos+'px,0px)');
                     makeTail(jQuery(this).find('.whale').get(0),postPos);
@@ -65,6 +64,12 @@
 
             function setSizes() {
                 jQuery('#content').css('margin-top', jQuery('.header').height() + jQuery('.navigation').height());
+
+                jQuery('.mywaves').each(function (index, canvas) {
+
+                    postPos = 0;
+                    makeTail(jQuery(this).find('.whale').get(0),postPos);
+                });
 
                 jQuery('.waves').each(function (index, canvas) {
                     canvas.width = document.body.clientWidth;
