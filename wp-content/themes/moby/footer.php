@@ -126,7 +126,7 @@
                     centerX - width / 4, centerY - height / 2 + postPos, // C4
                     centerX, centerY - height / 2 + postPos); // A1
 
-                context.fillStyle = "red";
+                context.fillStyle = "#ff4d31";
                 context.fill();
                 context.closePath();
             }
