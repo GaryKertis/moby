@@ -1,4 +1,4 @@
-			<footer class="footer" role="contentinfo">
+			<!-- <footer class="footer" role="contentinfo">
 
 				<div id="inner-footer" class="wrap cf">
 
@@ -22,42 +22,126 @@
 
 				</div>
 
-			</footer>
+			</footer> -->
 
 		</div>
 
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
 		<script type="text/javascript">
-    		var s = skrollr.init();
-    		jQuery('.waves').each(function(index, canvas) {
-    		 canvas.width = document.body.clientWidth;
-    		 canvas.height = 50;
-    		 context = canvas.getContext('2d');
-			 context.globalCompositeOperation = 'source-out';
-			 
-		    context.lineWidth = 1;
 
-		    //context.fillStyle = 'rgb(182,207,208)';
-		   	var x = 0;
-    		var y = -71;
-    		var radius = 100;
-    		var startAngle = 0.25 * Math.PI;
-    		var endAngle = 0.75 * Math.PI;
-			context.beginPath();
-    		for (i=0;i<canvas.width;i++) {
+            var whale; 
 
-    		
-    		context.arc(x, y, radius, startAngle, endAngle, false);
-			x += (radius+40);
-    	}
-    	context.closePath();
-    	context.fill();
-		context.fillStyle = 'rgba(182,207,208,0.5)';
-		context.fillRect(0,0,canvas.width,canvas.height);
-		
+            jQuery(window).resize(function () {
+                setSizes();
+            });
 
-    });
+            postPos = 0; 
+
+            jQuery(window).scroll(function () {
+                var newPos = jQuery(window).scrollTop();
+                replaceHeader();
+
+                jQuery('.header').css('-webkit-transform', 'translate3d(0px,' + newPos + 'px,0px)');
+                //jQuery('#whale').css('-webkit-transform', 'translate3d(0px,' + whalePos + 'px,0px)');
+
+                    //jQuery(this).css('-webkit-transform', 'translate3d(0px,'+postPos+'px,0px)');
+                                        
+                        console.log(jQuery(window).height());
+                        console.log(jQuery('.whale').offset().top);
+
+                        if (newPos > jQuery('.whale').offset().top/2) {
+                            //50% in view, begin animation.
+
+                            postPos = newPos - (jQuery('.whale').offset().top/2);
+
+                            if (postPos <= 250) makeTail(jQuery('.whale').get(0),postPos);
+
+                    }
+                    
+
+
+            });
+
+            function replaceHeader() {
+                currentPos = jQuery('#main').offset().top;
+                if (!jQuery('#inner-header').hasClass('whaletale') && jQuery('.header').offset().top > currentPos) {
+                    console.log('changed to whale tale');
+                    jQuery('#inner-header').addClass('whaletale')
+                } else if (jQuery('#inner-header').hasClass('whaletale') && jQuery('.header').offset().top <= currentPos) {
+                    console.log('changed back to header');
+                    jQuery('#inner-header').removeClass('whaletale')
+                }
+            }
+
+            function setSizes() {
+                jQuery('#content').css('margin-top', jQuery('.header').height() + jQuery('.navigation').height());
+
+
+                    makeTail(jQuery('.whale').get(0),0);
+
+
+                jQuery('.waves').each(function (index, canvas) {
+                    canvas.width = document.body.clientWidth;
+                    canvas.height = 50;
+                    context = canvas.getContext('2d');
+                    context.globalCompositeOperation = 'source-out';
+                    context.fillStyle = jQuery(this).next().css('background-color');
+
+
+                    context.lineWidth = 1;
+
+                    //context.fillStyle = 'rgb(182,207,208)';
+                    var x = 0;
+                    var y = -71;
+                    var radius = 100;
+                    var startAngle = 0.25 * Math.PI;
+                    var endAngle = 0.75 * Math.PI;
+                    context.beginPath();
+                    for (i = 0; i < canvas.width; i++) {
+
+
+                        context.arc(x, y, radius, startAngle, endAngle, false);
+                        x += (radius + 40);
+                    }
+                    context.closePath();
+                    context.fill();
+                    context.fillRect(0, 0, canvas.width, canvas.height);
+
+
+                });
+
+            }
+
+            function makeTail(canvas,postPos) {
+                whale = canvas;
+                console.log(postPos);
+                width = document.body.clientWidth;
+                height = 200;
+                whale.width = width;
+                whale.height = height;
+                centerX = whale.width / 2;
+                centerY = whale.height / 2;
+                context = whale.getContext('2d');
+                context.beginPath();
+
+                context.moveTo(centerX, centerY - height / 2 + postPos); // A1
+
+                context.bezierCurveTo(
+                    centerX + width / 4, centerY - height / 2 + postPos, // C1
+                    centerX + width / 4, centerY + height / 2 + postPos, // C2
+                    centerX, centerY + height / 2 + postPos); // A2
+
+                context.bezierCurveTo(
+                    centerX - width / 4, centerY + height / 2 + postPos, // C3
+                    centerX - width / 4, centerY - height / 2 + postPos, // C4
+                    centerX, centerY - height / 2 + postPos); // A1
+
+                context.fillStyle = "#ff4d31";
+                context.fill();
+                context.closePath();
+            }
+            setSizes();
 
     	</script>
 	</body>

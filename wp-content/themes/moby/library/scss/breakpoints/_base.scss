@@ -98,7 +98,7 @@ a, a:visited {
 		so it basically works like the :hover selector
 		for mobile devices.
 		*/
-		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+		-webkit-tap-highlight-color : $gray;
 	}
 }
 
@@ -156,12 +156,40 @@ HEADER STYLES
 	width: 100%;
 	text-align: center;
 	font-family:"AntiqueOliveW01-Compact";
+	position: fixed;
+	z-index: -10;
+	top: 48px;
 }
+
+
+.navigation {
+	top: 0px;
+	position: fixed;
+	width: 100%;
+	z-index: 100000;
+	background-color: $white;
+}
+.mywaves:nth-child(1n) .post_wrapper {
+	background-color: $gray;
+}
+
+.mywaves:nth-child(2n) .post_wrapper {
+	background-color: darken($gray, 10%);
+}
+
+
+.mywaves { 
+	margin-bottom: -100px;
+}
+
+.whaletale {
+	visibility: hidden;
+}
+
 
 .waves {
 	margin-bottom: -7px;
 }
-
 
 	#logo {
 		margin: 0.75em 0;
@@ -177,6 +205,7 @@ HEADER STYLES
 		.blue {
 			color: $blue;
 			font-size: 8.098vmax;
+			line-height: .6em;
 
 		}
 	}
@@ -272,10 +301,12 @@ POSTS & CONTENT STYLES
 	//margin-top: 1.5em;
 }
 
+
+
 		.post_wrapper {
-			background-color: $gray;
 			border-radius: 3px;
-			margin-bottom: 1.5em;
+			padding-bottom: 50px;
+			//margin-bottom: 1.5em;
 			//border: 1px solid $border-color;
 
 			header {
@@ -298,6 +329,8 @@ POSTS & CONTENT STYLES
 		.page-title,
 		.entry-title {
 			margin: 0;
+			font-family: $galliard;
+			color: $black;
 
 			a, a:visited {
 			font-family: $galliard;
@@ -314,7 +347,7 @@ POSTS & CONTENT STYLES
 
 		/* want to style individual post classes? Booya! */
 		.post-id {}         /* post by id (i.e. post-3) */
-		.post {margin: auto}            /* general post style */
+		.post {margin: auto; padding-top: 2.5em; padding-bottom: 2.5em}            /* general post style */
 		.page {}            /* general article on a page style */
 		.attachment {}      /* general style on an attatchment */
 		.sticky {}          /* sticky post style */
@@ -334,6 +367,7 @@ POSTS & CONTENT STYLES
 		/* entry content */
 		.entry-content {
 			//padding: 1.5em 1.5em 0;
+			margin-top: .5em;
 
 			p {
 				margin: 0 0 1.5em;

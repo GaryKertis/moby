@@ -43,7 +43,7 @@
 
 		<div id="container">
 
-			<nav role="navigation">
+			<nav role="navigation" class="navigation">
 						<?php wp_nav_menu(array(
     					'container' => false,                           // remove nav container
     					'container_class' => 'menu cf',                 // class of container (should you choose to use it)
@@ -70,5 +70,4 @@
 						<span class="nyc">NYC</span></p>
 
 				</div>
-
 			</header>
