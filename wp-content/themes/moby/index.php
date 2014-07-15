@@ -40,7 +40,7 @@
 								</footer> -->
 
 							</article>
-							<canvas id="whale-<?php the_ID(); ?>" class="whale" width="100%" height="200px"></canvas>
+							<canvas id="whale-<?php the_ID(); ?>" class="whale" width=0 height=0></canvas>
 						</div>
 						</div>
 							<?php endwhile; ?>

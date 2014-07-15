@@ -205,6 +205,7 @@ HEADER STYLES
 		.blue {
 			color: $blue;
 			font-size: 8.098vmax;
+			line-height: .6em;
 
 		}
 	}
@@ -329,7 +330,7 @@ POSTS & CONTENT STYLES
 		.entry-title {
 			margin: 0;
 			font-family: $galliard;
-			color: $red;
+			color: $black;
 
 			a, a:visited {
 			font-family: $galliard;
@@ -346,7 +347,7 @@ POSTS & CONTENT STYLES
 
 		/* want to style individual post classes? Booya! */
 		.post-id {}         /* post by id (i.e. post-3) */
-		.post {margin: auto}            /* general post style */
+		.post {margin: auto; padding-top: 2.5em; padding-bottom: 2.5em}            /* general post style */
 		.page {}            /* general article on a page style */
 		.attachment {}      /* general style on an attatchment */
 		.sticky {}          /* sticky post style */
@@ -366,6 +367,7 @@ POSTS & CONTENT STYLES
 		/* entry content */
 		.entry-content {
 			//padding: 1.5em 1.5em 0;
+			margin-top: .5em;
 
 			p {
 				margin: 0 0 1.5em;

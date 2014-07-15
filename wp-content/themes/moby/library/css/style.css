@@ -995,7 +995,7 @@ textarea,
   padding: 0 12px;
   margin-bottom: 14px;
   font-size: 1em;
-  color: #323944;
+  color: #2c2e2e;
   border-radius: 3px;
   vertical-align: middle;
   box-shadow: none;
@@ -1260,7 +1260,7 @@ body {
   font-family: "Gill Sans W01 Light";
   font-size: 100%;
   line-height: 1.5;
-  color: #323944;
+  color: #2c2e2e;
   -webkit-font-smoothing: antialiased; }
 
 /********************
@@ -1313,12 +1313,12 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #323944;
+  color: #2c2e2e;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #1f232a; }
+    color: #161717; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.
@@ -1406,7 +1406,8 @@ HEADER STYLES
     margin-bottom: 10px !important; }
   #logo .blue {
     color: #2980b9;
-    font-size: 8.098vmax; }
+    font-size: 8.098vmax;
+    line-height: .6em; }
 
 /*********************
 NAVIGATION STYLES
@@ -1434,7 +1435,7 @@ and more scalable.
     */ }
     .nav li a {
       display: block;
-      color: #323944;
+      color: #2c2e2e;
       text-decoration: none;
       padding: 0.75em;
       /*
@@ -1466,7 +1467,7 @@ POSTS & CONTENT STYLES
 .entry-title {
   margin: 0;
   font-family: "ITC Galliard W01 Roman";
-  color: #ff4d31; }
+  color: #2c2e2e; }
   .single-title a, .single-title a:visited,
   .page-title a,
   .page-title a:visited,
@@ -1477,7 +1478,9 @@ POSTS & CONTENT STYLES
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
 .post {
-  margin: auto; }
+  margin: auto;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em; }
 
 /* general post style */
 /* general article on a page style */
@@ -1494,6 +1497,7 @@ POSTS & CONTENT STYLES
 
 /* entry content */
 .entry-content {
+  margin-top: .5em;
   /*
   image alignment on a screen this size may be
   a bit difficult. It's set to start aligning
@@ -1550,7 +1554,7 @@ POSTS & CONTENT STYLES
     max-width: 100%;
     height: auto; }
   .entry-content pre {
-    background: #323944;
+    background: #2c2e2e;
     color: #f8f9fa;
     font-size: 0.9em;
     padding: 1.5em;
@@ -1618,10 +1622,10 @@ PAGE NAVI STYLES
       color: white; }
   .pagination .current {
     cursor: default;
-    color: #323944; }
+    color: #2c2e2e; }
     .pagination .current:hover, .pagination .current:focus {
       background-color: white;
-      color: #323944; }
+      color: #2c2e2e; }
 
 /* end .bones_page_navi */
 /* fallback previous & next links */
@@ -1732,7 +1736,7 @@ COMMENT FORM STYLES
   font-style: italic;
   margin: 0; }
   .logged-in-as a {
-    color: #323944; }
+    color: #2c2e2e; }
 
 .comment-form-comment {
   margin: 1.5em 0 0.75em; }
@@ -1780,7 +1784,7 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background-color: #323944;
+  background-color: #2c2e2e;
   color: #f8f9fa; }
 
 /*
@@ -1913,7 +1917,7 @@ you can add resource intensive styles.
     /* highlight current page */
     /* end current highlighters */ }
     .nav ul {
-      background: #323944;
+      background: #2c2e2e;
       margin-top: 0; }
     .nav li {
       float: left;

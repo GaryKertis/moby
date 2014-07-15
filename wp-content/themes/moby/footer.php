@@ -36,19 +36,31 @@
                 setSizes();
             });
 
+            postPos = 0; 
+
             jQuery(window).scroll(function () {
                 var newPos = jQuery(window).scrollTop();
                 replaceHeader();
 
                 jQuery('.header').css('-webkit-transform', 'translate3d(0px,' + newPos + 'px,0px)');
                 //jQuery('#whale').css('-webkit-transform', 'translate3d(0px,' + whalePos + 'px,0px)');
-                jQuery('.mywaves').each(function (index, canvas) {
-
-                    postPos = newPos/(index+1+index);
 
                     //jQuery(this).css('-webkit-transform', 'translate3d(0px,'+postPos+'px,0px)');
-                    makeTail(jQuery(this).find('.whale').get(0),postPos);
-                });
+                                        
+                        console.log(jQuery(window).height());
+                        console.log(jQuery('.whale').offset().top);
+
+                        if (newPos > jQuery('.whale').offset().top/2) {
+                            //50% in view, begin animation.
+
+                            postPos = newPos - (jQuery('.whale').offset().top/2);
+
+                            if (postPos <= 250) makeTail(jQuery('.whale').get(0),postPos);
+
+                    }
+                    
+
+
             });
 
             function replaceHeader() {
@@ -65,11 +77,9 @@
             function setSizes() {
                 jQuery('#content').css('margin-top', jQuery('.header').height() + jQuery('.navigation').height());
 
-                jQuery('.mywaves').each(function (index, canvas) {
 
-                    postPos = 0;
-                    makeTail(jQuery(this).find('.whale').get(0),postPos);
-                });
+                    makeTail(jQuery('.whale').get(0),0);
+
 
                 jQuery('.waves').each(function (index, canvas) {
                     canvas.width = document.body.clientWidth;
@@ -107,8 +117,9 @@
                 whale = canvas;
                 console.log(postPos);
                 width = document.body.clientWidth;
+                height = 200;
                 whale.width = width;
-                height = whale.height;
+                whale.height = height;
                 centerX = whale.width / 2;
                 centerY = whale.height / 2;
                 context = whale.getContext('2d');
