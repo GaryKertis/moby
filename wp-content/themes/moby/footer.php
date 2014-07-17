@@ -75,6 +75,11 @@
             }
 
             function setSizes() {
+
+               
+                //jQuery('#inner-header').textfill({ maxFontPixels: 0, widthOnly: true });
+
+
                 jQuery('#content').css('margin-top', jQuery('.header').height() + jQuery('.navigation').height());
 
 

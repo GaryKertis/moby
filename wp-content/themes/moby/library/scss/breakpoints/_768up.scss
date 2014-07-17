@@ -23,7 +23,7 @@ body {}
 LAYOUT & GRID STYLES
 *********************/
 
-.post {
+.post, #inner-header {
 	width: 760px;
 }
 
@@ -33,7 +33,17 @@ HEADER STYLES
 
 .header {}
 
-	#logo {}
+	#logo {
+
+		.red {
+			font-size: 3em;
+		}
+
+		.blue {
+			font-size: 3em;
+			letter-spacing: .5px;
+		}
+	}
 
 /*********************
 NAVIGATION STYLES

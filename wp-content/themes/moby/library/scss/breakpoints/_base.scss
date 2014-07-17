@@ -161,6 +161,9 @@ HEADER STYLES
 	top: 48px;
 }
 
+#inner-header {
+	white-space: nowrap;
+}
 
 .navigation {
 	top: 0px;
@@ -169,6 +172,8 @@ HEADER STYLES
 	z-index: 100000;
 	background-color: $white;
 }
+
+
 .mywaves:nth-child(1n) .post_wrapper {
 	background-color: $gray;
 }
@@ -188,23 +193,24 @@ HEADER STYLES
 
 
 .waves {
-	margin-bottom: -7px;
+	margin-bottom: -10px;
 }
 
 	#logo {
 		margin: 0.75em 0;
+		margin-left: -10px;
 		text-align: center;
 
 
 		.red {
 			color: $red;
-			font-size: 8vmax;
+			font-size: 2em;
 			margin-bottom: 10px!important;
 		}
 
 		.blue {
 			color: $blue;
-			font-size: 8.098vmax;
+			font-size: 2em;
 			line-height: .6em;
 
 		}
@@ -227,6 +233,8 @@ and more scalable.
 	margin: 0;
 
 	li {
+
+		display: inline-block;
 
 		a {
 			display: block;
@@ -368,6 +376,7 @@ POSTS & CONTENT STYLES
 		.entry-content {
 			//padding: 1.5em 1.5em 0;
 			margin-top: .5em;
+
 
 			p {
 				margin: 0 0 1.5em;

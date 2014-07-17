@@ -499,16 +499,13 @@ FONT FACE (IN YOUR FACE)
 */
 @font-face {
   font-family: "AntiqueOliveW01-Compact";
-  src: url("http://fast.fonts.net/dv2/2/88772fdf-3d8b-4d1f-b367-430adb7df853.eot?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4");
-  src: url("http://fast.fonts.net/dv2/2/88772fdf-3d8b-4d1f-b367-430adb7df853.eot?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4#iefix") format("embedded-opentype"), url("http://fast.fonts.net/dv2/3/e14f2ed7-5819-4ea6-a282-4b9ddc4eb277.woff?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4") format("woff"), url("http://fast.fonts.net/dv2/1/0b6c7f2b-b8ba-4fc8-947c-9997e9900cbb.ttf?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4") format("truetype"), url("http://fast.fonts.net/dv2/11/97a48e2f-6344-4a90-b3c8-1a7d2b2b9824.svg?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4#97a48e2f-6344-4a90-b3c8-1a7d2b2b9824") format("svg"); }
+  src: url("../../library/fonts/AdobeAntiqueOliveStdCompact.otf") format("opentype"); }
 @font-face {
   font-family: "ITC Galliard W01 Roman";
-  src: url("http://fast.fonts.net/dv2/2/87ac9b67-ab82-4fc3-b1a9-b52b90ffe131.eot?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4");
-  src: url("http://fast.fonts.net/dv2/2/87ac9b67-ab82-4fc3-b1a9-b52b90ffe131.eot?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4#iefix") format("embedded-opentype"), url("http://fast.fonts.net/dv2/3/b0071fdc-7e92-4cac-a19c-6b12dbed2638.woff?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4") format("woff"), url("http://fast.fonts.net/dv2/1/65d68c56-627a-478d-b839-8d3cb3a95c9e.ttf?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4") format("truetype"), url("http://fast.fonts.net/dv2/11/77544803-b777-4f51-9dff-128506eea7c8.svg?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4#77544803-b777-4f51-9dff-128506eea7c8") format("svg"); }
+  src: url("../../library/fonts/Adobe - GalliardStd-Roman.otf") format("opentype"); }
 @font-face {
   font-family: "Gill Sans W01 Light";
-  src: url("http://fast.fonts.net/dv2/2/acd8a043-828c-4c2c-98cb-b5224f5d4cdb.eot?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4");
-  src: url("http://fast.fonts.net/dv2/2/acd8a043-828c-4c2c-98cb-b5224f5d4cdb.eot?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4#iefix") format("embedded-opentype"), url("http://fast.fonts.net/dv2/3/c56da29d-9c5b-4d94-900f-770cde3dd317.woff?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4") format("woff"), url("http://fast.fonts.net/dv2/1/378182d1-8021-4674-a814-cc8f01f9a937.ttf?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4") format("truetype"), url("http://fast.fonts.net/dv2/11/d8851d95-478d-47a9-a0b0-a8d8e4ca127a.svg?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4#d8851d95-478d-47a9-a0b0-a8d8e4ca127a") format("svg"); }
+  src: url("../../library/fonts/Adobe - GillSansStd-Light.otf") format("opentype"); }
 /*
 The following is based of Typebase:
 https://github.com/devinhunt/typebase.css
@@ -1375,6 +1372,9 @@ HEADER STYLES
   z-index: -10;
   top: 48px; }
 
+#inner-header {
+  white-space: nowrap; }
+
 .navigation {
   top: 0px;
   position: fixed;
@@ -1395,18 +1395,19 @@ HEADER STYLES
   visibility: hidden; }
 
 .waves {
-  margin-bottom: -7px; }
+  margin-bottom: -10px; }
 
 #logo {
   margin: 0.75em 0;
+  margin-left: -10px;
   text-align: center; }
   #logo .red {
     color: #ff4d31;
-    font-size: 8vmax;
+    font-size: 2em;
     margin-bottom: 10px !important; }
   #logo .blue {
     color: #2980b9;
-    font-size: 8.098vmax;
+    font-size: 2em;
     line-height: .6em; }
 
 /*********************
@@ -1426,6 +1427,7 @@ and more scalable.
   /* highlight current page */
   /* end current highlighters */ }
   .nav li {
+    display: inline-block;
     /*
     so you really have to rethink your dropdowns for mobile.
     you don't want to have it expand too much because the
@@ -1902,12 +1904,18 @@ you can add resource intensive styles.
   /*********************
   LAYOUT & GRID STYLES
   *********************/
-  .post {
+  .post, #inner-header {
     width: 760px; }
 
   /*********************
   HEADER STYLES
   *********************/
+  #logo .red {
+    font-size: 3em; }
+  #logo .blue {
+    font-size: 3em;
+    letter-spacing: .5px; }
+
   /*********************
   NAVIGATION STYLES
   *********************/
@@ -2034,8 +2042,14 @@ you can add resource intensive styles.
   be seen on the Desktop.
   
   ******************************************************************/
-  .post {
-    width: 1040px; } }
+  .post, #inner-header {
+    width: 1040px; }
+
+  #logo .red {
+    font-size: 4em; }
+  #logo .blue {
+    font-size: 4em;
+    letter-spacing: .7px; } }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.

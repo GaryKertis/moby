@@ -9,6 +9,18 @@ be seen on the Desktop.
 
 ******************************************************************/
 
-.post {
+.post, #inner-header {
   width: 1040px;
 }
+
+	#logo {
+
+		.red {
+			font-size: 4em;
+		}
+
+		.blue {
+			font-size: 4em;
+			letter-spacing: .7px;
+		}
+	}
