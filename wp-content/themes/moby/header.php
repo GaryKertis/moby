@@ -44,21 +44,20 @@
 		<div id="container">
 
 			<nav role="navigation" class="navigation">
-						<?php wp_nav_menu(array(
-    					'container' => false,                           // remove nav container
-    					'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-    					'menu_class' => 'nav top-nav cf',               // adding custom nav class
-    					'theme_location' => 'main-nav',                 // where it's located in the theme
-    					'before' => '',                                 // before the menu
-        			'after' => '',                                  // after the menu
-        			'link_before' => '',                            // before each link
-        			'link_after' => '',                             // after each link
-        			'depth' => 0,                                   // limit the depth of the nav
-    					'fallback_cb' => ''                             // fallback function (if there is one)
-						)); ?>
-
-					</nav>
+				<ul id="menu-navigation" class="nav top-nav cf">
+											<?php
+			$args = array( 'posts_per_page' => 10, 'order'=> 'DESC', 'orderby' => 'date' );	
+			$postslist = get_posts( $args );
+			foreach ( $postslist as $post ) :
+  			setup_postdata( $post ); ?> 
+			<li id="menu-item-<?php the_id(); ?>" class="menu-item">
+				<a href="#post-<?php the_id(); ?>"><?php the_title(); ?></a>
+			</li><?php
+			endforeach; 
+			wp_reset_postdata();
+			?>
+			</ul>
+			</nav>
 
 			<header class="header" role="banner">
 

@@ -27,6 +27,23 @@ them in here, they won't work.
 NAVIGATION STYLES
 *********************/
 
+#logo {
+		//margin-left: -10px;
+		text-align: left;
+
+		.red {
+			font-size: 2em;
+		}
+
+		.blue {
+			font-size: 2em;
+			letter-spacing: .5px;
+		}
+	}
+#inner-header {
+	width: 538px;
+}
+
 .nav {}
 
 	/* .menu is clearfixed inside mixins.scss */
@@ -48,7 +65,7 @@ NAVIGATION STYLES
 				&:last-child {}
 
 				/*
-				plan your menus and drop-downs wisely.
+				plan your menus and drop-docns wisely.
 				*/
 				ul.sub-menu,
 				ul.children {
@@ -77,8 +94,13 @@ NAVIGATION STYLES
 POSTS & CONTENT STYLES
 *********************/
 
+
+
 /* entry content */
 .entry-content {
+			padding-left: 0;
+			padding-right: 0;
+
 
 
 	/* at this larger size, we can start to align images */

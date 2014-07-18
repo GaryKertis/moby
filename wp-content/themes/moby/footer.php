@@ -1,4 +1,4 @@
-			<!-- <footer class="footer" role="contentinfo">
+			<footer class="footer" role="contentinfo">
 
 				<div id="inner-footer" class="wrap cf">
 
@@ -22,7 +22,7 @@
 
 				</div>
 
-			</footer> -->
+			</footer>
 
 		</div>
 
@@ -40,15 +40,15 @@
 
             jQuery(window).scroll(function () {
                 var newPos = jQuery(window).scrollTop();
-                replaceHeader();
 
-                jQuery('.header').css('-webkit-transform', 'translate3d(0px,' + newPos + 'px,0px)');
+                jQuery('.header').css({'-webkit-transform': 'translate3d(0px,' + newPos + 'px,0px)',
+                                        '-mozilla-transform': 'translate3d(0px,' + newPos + 'px,0px)',
+                                        'transform': 'translate3d(0px,' + newPos + 'px,0px)'
+                                    });
                 //jQuery('#whale').css('-webkit-transform', 'translate3d(0px,' + whalePos + 'px,0px)');
 
                     //jQuery(this).css('-webkit-transform', 'translate3d(0px,'+postPos+'px,0px)');
                                         
-                        console.log(jQuery(window).height());
-                        console.log(jQuery('.whale').offset().top);
 
                         if (newPos > jQuery('.whale').offset().top/2) {
                             //50% in view, begin animation.
@@ -58,27 +58,22 @@
                             if (postPos <= 250) makeTail(jQuery('.whale').get(0),postPos);
 
                     }
-                    
+                replaceHeader();
 
 
             });
 
             function replaceHeader() {
+
                 currentPos = jQuery('#main').offset().top;
                 if (!jQuery('#inner-header').hasClass('whaletale') && jQuery('.header').offset().top > currentPos) {
-                    console.log('changed to whale tale');
                     jQuery('#inner-header').addClass('whaletale')
                 } else if (jQuery('#inner-header').hasClass('whaletale') && jQuery('.header').offset().top <= currentPos) {
-                    console.log('changed back to header');
                     jQuery('#inner-header').removeClass('whaletale')
                 }
             }
 
             function setSizes() {
-
-               
-                //jQuery('#inner-header').textfill({ maxFontPixels: 0, widthOnly: true });
-
 
                 jQuery('#content').css('margin-top', jQuery('.header').height() + jQuery('.navigation').height());
 
@@ -120,7 +115,6 @@
 
             function makeTail(canvas,postPos) {
                 whale = canvas;
-                console.log(postPos);
                 width = document.body.clientWidth;
                 height = 200;
                 whale.width = width;

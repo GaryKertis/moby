@@ -163,10 +163,13 @@ HEADER STYLES
 
 #inner-header {
 	white-space: nowrap;
+	width: 265px;
+	padding-bottom: 3em;
 }
 
 .navigation {
 	top: 0px;
+	height: 42px;
 	position: fixed;
 	width: 100%;
 	z-index: 100000;
@@ -199,18 +202,17 @@ HEADER STYLES
 	#logo {
 		margin: 0.75em 0;
 		margin-left: -10px;
-		text-align: center;
-
+		text-align: left;
 
 		.red {
 			color: $red;
-			font-size: 2em;
+			font-size: 1em;
 			margin-bottom: 10px!important;
 		}
 
 		.blue {
 			color: $blue;
-			font-size: 2em;
+			font-size: 1em;
 			line-height: .6em;
 
 		}
@@ -228,9 +230,15 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 
+#menu-navigation {
+		text-align: justify;
+		margin: auto;
+}
+
 .nav {
 	border-bottom: 0;
 	margin: 0;
+
 
 	li {
 
@@ -241,6 +249,7 @@ and more scalable.
 			color: $black;
 			text-decoration: none;
 			padding: 0.75em;
+			text-transform: uppercase;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -301,6 +310,20 @@ and more scalable.
 } /* end .nav */
 
 
+#menu-navigation:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+#menu-navigation:first-child a {
+    padding-left: 0px;
+}
+
+#menu-navigation:last-child a {
+    padding-right: 0px;
+}
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -308,8 +331,6 @@ POSTS & CONTENT STYLES
 #content {
 	//margin-top: 1.5em;
 }
-
-
 
 		.post_wrapper {
 			border-radius: 3px;
@@ -374,8 +395,11 @@ POSTS & CONTENT STYLES
 
 		/* entry content */
 		.entry-content {
-			//padding: 1.5em 1.5em 0;
 			margin-top: .5em;
+			text-align: justify;
+						padding-left: 1.5em;
+			padding-right: 1.5em;
+
 
 
 			p {
@@ -923,6 +947,10 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
+
+#main .mywaves:last-child {
+	margin-bottom: 0;
+}
 
 .footer {
 	clear: both;
