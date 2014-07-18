@@ -30,8 +30,6 @@
 		<?php wp_footer(); ?>
 		<script type="text/javascript">
 
-            var whale; 
-
             jQuery(window).resize(function () {
                 setSizes();
             });
@@ -77,10 +75,6 @@
 
                 jQuery('#content').css('margin-top', jQuery('.header').height() + jQuery('.navigation').height());
 
-
-                    //makeTail(jQuery('.whale').get(0),0);
-
-
                 jQuery('.waves').each(function (index, canvas) {
                     canvas.width = document.body.clientWidth;
                     canvas.height = 50;
@@ -113,33 +107,6 @@
 
             }
 
-            function makeTail(canvas,postPos) {
-                whale = canvas;
-                width = document.body.clientWidth;
-                height = 200;
-                whale.width = width;
-                whale.height = height;
-                centerX = whale.width / 2;
-                centerY = whale.height / 2;
-                context = whale.getContext('2d');
-                context.beginPath();
-
-                context.moveTo(centerX, centerY - height / 2 + postPos); // A1
-
-                context.bezierCurveTo(
-                    centerX + width / 4, centerY - height / 2 + postPos, // C1
-                    centerX + width / 4, centerY + height / 2 + postPos, // C2
-                    centerX, centerY + height / 2 + postPos); // A2
-
-                context.bezierCurveTo(
-                    centerX - width / 4, centerY + height / 2 + postPos, // C3
-                    centerX - width / 4, centerY - height / 2 + postPos, // C4
-                    centerX, centerY - height / 2 + postPos); // A1
-
-                context.fillStyle = "#ff4d31";
-                context.fill();
-                context.closePath();
-            }
             setSizes();
 
     	</script>

@@ -97,7 +97,7 @@ HEADER STYLES
 	font-family:"AntiqueOliveW01-Compact";
 	position: fixed;
 	z-index: -10;
-	top: 48px;
+	top: 60px;
 }
 
 #inner-header {
@@ -108,10 +108,11 @@ HEADER STYLES
 
 .navigation {
 	top: 0px;
-	height: 42px;
+	height: 62px;
 	position: fixed;
 	width: 100%;
 	z-index: 100000;
+	padding-top: 20px;
 	background-color: $white;
 }
 
@@ -198,6 +199,10 @@ and more scalable.
 		margin: auto;
 }
 
+.navigation {
+	display: none;
+}
+
 .nav {
 	border-bottom: 0;
 	margin: 0;
@@ -213,6 +218,8 @@ and more scalable.
 			text-decoration: none;
 			padding: 0.75em;
 			text-transform: uppercase;
+			font-size: 0.75em;
+			font-weight: bold;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -500,7 +507,7 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
+	background-color: $dark-blue;
 	color: $light-gray;
 }
 

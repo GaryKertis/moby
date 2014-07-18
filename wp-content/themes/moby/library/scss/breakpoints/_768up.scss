@@ -27,6 +27,8 @@ LAYOUT & GRID STYLES
 	width: 760px;
 }
 
+.navigation {display: block}
+
 /*********************
 HEADER STYLES
 *********************/
@@ -35,19 +37,17 @@ HEADER STYLES
 
 	#logo {
 
+
+
 		.red {
-			font-size: 3em;
+			font-size: 2.9em;
 		}
 
 		.blue {
-			font-size: 3em;
+			font-size: 2.9em;
 			letter-spacing: .5px;
 		}
 	}
-
-#inner-header {
-	width: 805px;
-}
 
 /*********************
 NAVIGATION STYLES

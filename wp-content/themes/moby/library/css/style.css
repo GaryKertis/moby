@@ -1313,7 +1313,7 @@ HEADER STYLES
   font-family: "AntiqueOliveW01-Compact";
   position: fixed;
   z-index: -10;
-  top: 48px; }
+  top: 60px; }
 
 #inner-header {
   white-space: nowrap;
@@ -1322,10 +1322,11 @@ HEADER STYLES
 
 .navigation {
   top: 0px;
-  height: 42px;
+  height: 62px;
   position: fixed;
   width: 100%;
   z-index: 100000;
+  padding-top: 20px;
   background-color: white; }
 
 .mywaves:nth-child(1n) .post_wrapper {
@@ -1390,6 +1391,9 @@ and more scalable.
   text-align: justify;
   margin: auto; }
 
+.navigation {
+  display: none; }
+
 .nav {
   border-bottom: 0;
   margin: 0;
@@ -1411,6 +1415,8 @@ and more scalable.
       text-decoration: none;
       padding: 0.75em;
       text-transform: uppercase;
+      font-size: 0.75em;
+      font-weight: bold;
       /*
       remember this is for mobile ONLY, so there's no need
       to even declare hover styles here, you can do it in
@@ -1558,7 +1564,7 @@ FOOTER STYLES
 
 .footer {
   clear: both;
-  background-color: #2c2e2e;
+  background-color: #00516c;
   color: #f8f9fa; }
 
 /*
@@ -1692,17 +1698,17 @@ you can add resource intensive styles.
   .post, #inner-header, #menu-navigation {
     width: 760px; }
 
+  .navigation {
+    display: block; }
+
   /*********************
   HEADER STYLES
   *********************/
   #logo .red {
-    font-size: 3em; }
+    font-size: 2.9em; }
   #logo .blue {
-    font-size: 3em;
+    font-size: 2.9em;
     letter-spacing: .5px; }
-
-  #inner-header {
-    width: 805px; }
 
   /*********************
   NAVIGATION STYLES
@@ -1833,9 +1839,9 @@ you can add resource intensive styles.
     width: 1040px; }
 
   #logo .red {
-    font-size: 4em; }
+    font-size: 3.95em; }
   #logo .blue {
-    font-size: 4em;
+    font-size: 3.95em;
     letter-spacing: .7px; } }
 /*********************
 LARGE VIEWING SIZE
