@@ -30,6 +30,26 @@
 		<?php wp_footer(); ?>
 		<script type="text/javascript">
 
+
+              var hashTagActive = "";
+                jQuery(".scroll").click(function (event) {
+        if(hashTagActive != this.hash) { //this will prevent if the user click several times the same link to freeze the scroll.
+            event.preventDefault();
+            //calculate destination place
+            var dest = 0;
+            if (jQuery(this.hash).offset().top > jQuery(document).height() - jQuery(window).height()) {
+                dest = jQuery(document).height() - jQuery(window).height();
+            } else {
+                dest = jQuery(this.hash).offset().top;
+            }
+            //go to destination
+            jQuery('html,body').animate({
+                scrollTop: dest
+            }, 1000, 'swing');
+            hashTagActive = this.hash;
+            }
+            });
+
             jQuery(window).resize(function () {
                 setSizes();
             });

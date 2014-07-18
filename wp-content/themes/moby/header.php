@@ -51,7 +51,7 @@
 			foreach ( $postslist as $post ) :
   			setup_postdata( $post ); ?> 
 			<li id="menu-item-<?php the_id(); ?>" class="menu-item">
-				<a href="#post-<?php the_id(); ?>"><?php the_title(); ?></a>
+				<a class="scroll" href="#post-<?php the_id(); ?>"><?php the_title(); ?></a>
 			</li><?php
 			endforeach; 
 			wp_reset_postdata();
