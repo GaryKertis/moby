@@ -45,17 +45,17 @@
                                         '-mozilla-transform': 'translate3d(0px,' + newPos + 'px,0px)',
                                         'transform': 'translate3d(0px,' + newPos + 'px,0px)'
                                     });
-                //jQuery('#whale').css('-webkit-transform', 'translate3d(0px,' + whalePos + 'px,0px)');
 
                     //jQuery(this).css('-webkit-transform', 'translate3d(0px,'+postPos+'px,0px)');
                                         
 
-                        if (newPos > jQuery('.whale').offset().top/2) {
+                        if (newPos > jQuery('.whale').offset().top - 100) {
                             //50% in view, begin animation.
 
-                            postPos = newPos - (jQuery('.whale').offset().top/2);
-
-                            if (postPos <= 250) makeTail(jQuery('.whale').get(0),postPos);
+                            postPos = newPos - (jQuery('.whale').offset().top - 100);
+                            console.log(postPos);
+                            if (postPos <= jQuery(window).height()/2) jQuery('.whale').css({'background-position': 'center '+postPos+'px'});
+;
 
                     }
                 replaceHeader();
@@ -78,7 +78,7 @@
                 jQuery('#content').css('margin-top', jQuery('.header').height() + jQuery('.navigation').height());
 
 
-                    makeTail(jQuery('.whale').get(0),0);
+                    //makeTail(jQuery('.whale').get(0),0);
 
 
                 jQuery('.waves').each(function (index, canvas) {
