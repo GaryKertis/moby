@@ -21,10 +21,12 @@
 
 								</header>
 
-								<section class="entry-content cf">
+								<section class="entry-content cf m-all t-1of2 d-1of2">
 									<?php the_content(); ?>
 								</section>
-
+								<section class="m-all t-1of2 d-1of2 last-col alignright filter">
+								<?php if ( has_post_thumbnail() ) {
+									the_post_thumbnail('large');} ?></section>
 								<!-- <footer class="article-footer cf">
 									<p class="footer-comment-count">
 										<?php // comments_number( __( '<span>No</span> Comments', 'bonestheme' ), __( '<span>One</span> Comment', 'bonestheme' ), _n( '<span>%</span> Comments', '<span>%</span> Comments', get_comments_number(), 'bonestheme' ) );?>

@@ -27,15 +27,13 @@ over your project's layout.
 // using a mixin since we can't use placeholder selectors
 @mixin grid-col {
   float: left;
-  padding-right: 0.75em;
+  padding-right: 2em;
 
 }
 
-// the last column
-.last-col {
-  float: right;
-  padding-right: 0 !important;
-}
+
+
+
 
 
 /*
@@ -50,6 +48,10 @@ them however you see fit.
     @include grid-col;
     width: 100%;
     padding-right: 0;
+  }
+
+  .m-all img {
+  display: none;
   }
 
   .m-1of2 {

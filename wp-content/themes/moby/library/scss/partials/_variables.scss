@@ -25,9 +25,10 @@ $red:				rgb(255,77,49);
 $blue:				rgb(0,163,216);
 $black:             #2c2e2e;
 $white:             #fff;
+$yellow:			#f3d03e;
 
-$light-gray:        #f8f9fa;
-$gray:              #DAE6E7;
+$light-gray:        #e8eeea;
+$gray:              #d0e0d6;
 $text-color:        $black;
 $meta-gray:         #9fa6b4;
 
@@ -40,7 +41,7 @@ $blue:              #2980b9;
 $dark-blue:			#00516C;
 
 $link-color:        $black;
-$link-hover:        darken($link-color, 9%);
+$link-hover:        $yellow;
 
 $border-color:      #ccc;
 $disabled-gray:     #cfcfcf;

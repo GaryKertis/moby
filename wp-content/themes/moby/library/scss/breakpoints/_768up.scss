@@ -23,7 +23,7 @@ body {}
 LAYOUT & GRID STYLES
 *********************/
 
-.post, #inner-header, #menu-navigation {
+.post, #inner-header, .nav {
 	width: 760px;
 }
 
@@ -71,7 +71,7 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				color: $black;
+				color: $link-hover;
 				text-decoration: none;
 			}
 		}

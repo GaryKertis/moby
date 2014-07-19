@@ -24,6 +24,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.filter {
+  background: $dark-blue;
+}
+
+.filter img {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  opacity: 0.4;
+  vertical-align: top;
+
+}
+
 
 /*********************
 LAYOUT & GRID STYLES
@@ -85,6 +97,10 @@ h1, .h1 {
 	line-height: 1;
 }
 
+.article-header h1 {
+	font-size: 1.5em;
+}
+
 
 /*********************
 HEADER STYLES
@@ -105,6 +121,7 @@ HEADER STYLES
 	width: 265px;
 	padding-bottom: 3em;
 }
+
 
 .navigation {
 	top: 0px;
@@ -194,7 +211,7 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 
-#menu-navigation {
+#menu-navigation, #menu-navbar {
 		text-align: justify;
 		margin: auto;
 }
@@ -280,17 +297,17 @@ and more scalable.
 } /* end .nav */
 
 
-#menu-navigation:after {
+.nav:after {
     content: '';
     display: inline-block;
     width: 100%;
 }
 
-#menu-navigation:first-child a {
+.nav:first-child a {
     padding-left: 0px;
 }
 
-#menu-navigation:last-child a {
+.nav:last-child a {
     padding-right: 0px;
 }
 
@@ -305,6 +322,8 @@ POSTS & CONTENT STYLES
 		.post_wrapper {
 			border-radius: 3px;
 			padding-bottom: 50px;
+			padding-left: .5em;
+			padding-right: .5em;
 			//margin-bottom: 1.5em;
 			//border: 1px solid $border-color;
 
@@ -334,7 +353,7 @@ POSTS & CONTENT STYLES
 			}
 		}
 
-		.post {margin: auto; padding-top: 2.5em; padding-bottom: 2.5em}            /* general post style */
+		.post {margin: auto; padding-top: 2em; padding-bottom: 2em}            /* general post style */
 
 		/* entry content */
 		.entry-content {
@@ -511,6 +530,14 @@ FOOTER STYLES
 	color: $light-gray;
 }
 
+.footer .nav li a {
+	color: $white;
+}
+
+#inner-footer {
+	padding: 1em;
+}
+
 	/*
 	if you checked out the link above:
 	http://www.alistapart.com/articles/organizing-mobile/
@@ -531,4 +558,4 @@ FOOTER STYLES
 	} /* end .footer-links */
 
 
-	.copyright {}
+	.copyright {text-align: center; font-size: 0.5em;}
