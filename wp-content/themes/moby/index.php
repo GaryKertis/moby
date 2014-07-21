@@ -14,19 +14,45 @@
 
 								<header class="article-header">
 
-									<h1 class="h1 entry-title"><?php the_title(); ?></h1>
 									<!-- <p class="byline vcard">
 										<?php // printf( __( 'Posted', 'bonestheme' ) . ' <time class="updated" datetime="%1$s" pubdate>%2$s</time> ' . __('by', 'bonestheme' ) . ' <span class="author">%3$s</span>', get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
 									</p> -->
 
 								</header>
+								<?php if(has_tag('about')) {
+									echo '<h1 class="h1 entry-title">'; 
+									the_title();
+									echo '</h1>';
+									echo '<section class="entry-content cf m-all t-1of2 d-1of2">';
+									the_content();
+									echo '</section>';
+								if ( has_post_thumbnail() ) { 
+									echo '<section class="m-all t-1of2 d-1of2 last-col alignright filter">';
+									the_post_thumbnail('large');
+									echo '</section>'; } 
+								} else if(has_tag('crew')){
+									echo '<h1 class="h1 entry-title">'; 
+									the_title();
+									echo '</h1>';
+									echo '<section class="entry-content cf crew">';
+									the_content();
+									echo '</section>';
+								} else if(has_tag('ports')) {
+									echo '<section class="entry-content cf">';
+									the_content();
+									echo '</section>';
+								} else {
+									echo '<h1 class="h1 entry-title">'; 
+									the_title();
+									echo '</h1>';
+									echo '<section class="entry-content cf">';
+									the_content();
+									echo '</section>';
+								}
 
-								<section class="entry-content cf m-all t-1of2 d-1of2">
-									<?php the_content(); ?>
-								</section>
-								<section class="m-all t-1of2 d-1of2 last-col alignright filter">
-								<?php if ( has_post_thumbnail() ) {
-									the_post_thumbnail('large');} ?></section>
+									?>
+
+
 								<!-- <footer class="article-footer cf">
 									<p class="footer-comment-count">
 										<?php // comments_number( __( '<span>No</span> Comments', 'bonestheme' ), __( '<span>One</span> Comment', 'bonestheme' ), _n( '<span>%</span> Comments', '<span>%</span> Comments', get_comments_number(), 'bonestheme' ) );?>

@@ -106,6 +106,22 @@ h1, .h1 {
 HEADER STYLES
 *********************/
 
+.crew {
+    -webkit-column-count: 4; /* Chrome, Safari, Opera */
+    -moz-column-count: 4; /* Firefox */
+    column-count: 4;
+    padding-right: 0px;
+    text-align: left;
+
+}
+
+.letter {
+	font-family: $galliard;
+	font-size: 2.5em;
+	padding-bottom: 5px;
+}
+
+
 .header {
 	background-color: $white;
 	width: 100%;
@@ -559,3 +575,14 @@ FOOTER STYLES
 
 
 	.copyright {text-align: center; font-size: 0.5em;}
+
+
+.horizontal .alignright {
+	margin-left: 0px!important;
+	margin-top: -4em;
+}
+
+.horizontal {
+	padding-bottom: 4em;
+	display: table;
+}
