@@ -29,6 +29,8 @@
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
 
 		<?php // wordpress head functions ?>
 		<?php wp_head(); ?>
