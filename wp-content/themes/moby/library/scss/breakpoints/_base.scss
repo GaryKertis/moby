@@ -110,9 +110,11 @@ HEADER STYLES
     -webkit-column-count: 4; /* Chrome, Safari, Opera */
     -moz-column-count: 4; /* Firefox */
     column-count: 4;
-    padding-right: 0px;
     text-align: left;
+}
 
+.crew .entry-content {
+	padding-right: 0px;
 }
 
 .map {

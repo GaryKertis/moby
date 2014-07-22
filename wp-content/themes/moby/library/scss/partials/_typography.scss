@@ -40,11 +40,32 @@ FONT FACE (IN YOUR FACE)
   }
 */
 
-@font-face {font-family:"AntiqueOliveW01-Compact";src:url("../../library/fonts/AdobeAntiqueOliveStdCompact.otf") format("opentype");}
+@font-face {
+font-family:"AntiqueOliveW01-Compact";src:url("../../library/fonts/AdobeAntiqueOliveStdCompact.otf") format("opentype"),
+url("../../library/fonts/AdobeAntiqueOliveStdCompact.eot?#iefix") format("embedded-opentype"),
+url('../../library/fonts/AdobeAntiqueOliveStdCompact.woff') format('woff'),
+url('../../library/fonts/AdobeAntiqueOliveStdCompact.ttf') format('truetype'),
+url('../../library/fonts/AdobeAntiqueOliveStdCompact.svg#font-name') format('svg');
+src: url('../../library/fonts/AdobeAntiqueOliveStdCompact.eot');
+}
 
-@font-face{font-family:"ITC Galliard W01 Roman";src:url("../../library/fonts/Adobe - GalliardStd-Roman.otf") format("opentype");}
+@font-face{
+font-family:"ITC Galliard W01 Roman";src:url("../../library/fonts/Adobe - GalliardStd-Roman.otf") format("opentype"),
+url("../../library/fonts/Adobe - GalliardStd-Roman.eot?#iefix") format("embedded-opentype"),
+url('../../library/fonts/Adobe - GalliardStd-Roman.woff') format('woff'),
+url('../../library/fonts/Adobe - GalliardStd-Roman.ttf') format('truetype'),
+url('../../library/fonts/Adobe - GalliardStd-Roman.svg#font-name') format('svg');
+src: url('../../library/fonts/Adobe - GalliardStd-Roman.eot');
+;}
 
-@font-face{font-family:"Gill Sans W01 Light";src:url("../../library/fonts/Adobe - GillSansStd-Light.otf") format("opentype");}
+@font-face{
+font-family:"Gill Sans W01 Light";src:url("../../library/fonts/Adobe - GillSansStd-Light.otf") format("opentype"),
+url("../../library/fonts/Adobe - GillSansStd-Light.eot?#iefix") format("embedded-opentype"),
+url('../../library/fonts/Adobe - GillSansStd-Light.woff') format('woff'),
+url('../../library/fonts/Adobe - GillSansStd-Light.ttf') format('truetype'),
+url('../../library/fonts/Adobe - GillSansStd-Light.svg#font-name') format('svg');
+src: url("../../library/fonts/Adobe - GillSansStd-Light.eot")
+;}
 
 /*
 The following is based of Typebase:
