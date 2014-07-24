@@ -120,7 +120,7 @@ HEADER STYLES
 .map {
 	width: 300px;
 	height: 300px;
-	margin: auto;
+	margin-left: auto;
 }
 
 .tag-ports .entry-content img {
@@ -190,6 +190,37 @@ HEADER STYLES
 	background-repeat: no-repeat;
 }
 
+#email {
+	background:url('../images/email bottle 01.svg') center top no-repeat;
+	background-size: contain;
+}
+
+#address {
+	background:url('../images/map marker 01.svg') center top no-repeat;
+	background-size: contain;
+}
+
+#phone {
+	background:url('../images/Phone 02.svg') center top no-repeat;
+	background-size: contain;
+}
+
+.contact {
+	height: 100px;
+}
+
+.contact-image {
+	width: 100%;
+	height: 100%;
+	display: none;
+
+}
+
+.contact:nth-child(3) {
+	padding-right: 0px;
+}
+
+
 .texture {
 	width: 100%;
 	height: 100%;
@@ -246,7 +277,7 @@ and more scalable.
 		margin: auto;
 }
 
-.navigation {
+.navigation, .map {
 	display: none;
 }
 
@@ -389,7 +420,7 @@ POSTS & CONTENT STYLES
 		.entry-content {
 			margin-top: .5em;
 			text-align: justify;
-						padding-left: 1.5em;
+			padding-left: 1.5em;
 			padding-right: 1.5em;
 
 			p {
@@ -599,4 +630,14 @@ FOOTER STYLES
 .horizontal {
 	padding-bottom: 4em;
 	display: table;
+}
+
+.question {
+	font-style: italic;
+	font-size: 1.5em;
+	text-align: left;
+}
+
+.answer {
+	width: 50%;
 }

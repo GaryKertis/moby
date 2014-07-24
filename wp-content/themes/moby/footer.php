@@ -133,33 +133,58 @@
             google.maps.event.addDomListener(window, 'load', init);
         
             function init() {
+
+                jQuery('.map').each(function(index, map){ 
+
+                lat = parseFloat(jQuery(this).text().split(',')[0]);
+                lon = parseFloat(jQuery(this).text().split(',')[1]);
+
+                latLng = new google.maps.LatLng(lat, lon);
                 // Basic options for a simple Google Map
                 // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
                 var mapOptions = {
                     // How zoomed in you want the map to start at (always required)
-                    zoom: 11,
+                    zoom: 13,
 
                     // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(40.6700, -73.9400), // New York
+                    center: latLng, // New York
 
                     // How you would like to style the map. 
                     // This is where you would paste any style found on Snazzy Maps.
-                    styles: [   {       featureType:'water',        stylers:[{color:'#00516C'},{visibility:'on'}]   },{     featureType:'landscape',        stylers:[{color:'#f2f2f2'}] },{     featureType:'road',     stylers:[{saturation:-100},{lightness:45}]  },{     featureType:'road.highway',     stylers:[{visibility:'simplified'}] },{     featureType:'road.arterial',        elementType:'labels.icon',      stylers:[{visibility:'off'}]    },{     featureType:'administrative',       elementType:'labels.text.fill',     stylers:[{color:'#444444'}] },{     featureType:'transit',      stylers:[{visibility:'off'}]    },{     featureType:'poi',      stylers:[{visibility:'off'}]    }]
+                    styles: [   {       featureType:'water',        stylers:[{color:'#00516C'},{visibility:'on'}]   },{     featureType:'landscape',        stylers:[{color:'#f2f2f2'}] },{     featureType:'road',     stylers:[{saturation:-100},{lightness:45}]  },{     featureType:'road.highway',     stylers:[{visibility:'simplified'}] },{     featureType:'road.arterial',        elementType:'labels.icon',      stylers:[{visibility:'off'}]    },{     featureType:'administrative',       elementType:'labels.text.fill',     stylers:[{color:'#444444'}] },{     featureType:'transit',      stylers:[{visibility:'off'}]    },{     featureType:'poi',      stylers:[{visibility:'off'}]    }],
+                    scrollwheel: false, // Disable Mouse Scroll zooming (Essential for responsive sites!)
+                    // All of the below are set to true by default, so simply remove if set to true:
+                    panControl:false, // Set to false to disable
+                    mapTypeControl:false, // Disable Map/Satellite switch
+                    scaleControl:false, // Set to false to hide scale
+                    streetViewControl:false, // Set to disable to hide street view
+                    overviewMapControl:false, // Set to false to remove overview control
+                    rotateControl:false // Set to false to disable rotate control
                 };
 
                 // Get the HTML DOM element that will contain your map 
                 // We are using a div with id="map" seen below in the <body>
-                var mapElement = document.getElementById('map1');
+                var mapElement = map;
 
                 // Create the Google Map using out element and options defined above
                 var map = new google.maps.Map(mapElement, mapOptions);
 
                   var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(40.6700, -73.9400),
+                    position: latLng,
                     map: map,
                     title: 'Hello World!',
                     icon: '<?php echo get_template_directory_uri(); ?>/library/images/map marker 02.svg'
                 });
+
+                var infowindow = new google.maps.InfoWindow({ // Create a new InfoWindow
+                content:"<h3>Snowdown Summit Cafe</h3><p>Railway Drive-through available.</p>" // HTML contents of the InfoWindow
+                });
+
+                google.maps.event.addListener(marker, 'load', function() { // Add a Click Listener to our marker
+                infowindow.open(map,marker); // Open our InfoWindow
+                });
+
+              });
             }
 
 

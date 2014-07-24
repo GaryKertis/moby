@@ -48,7 +48,7 @@
 			<nav role="navigation" class="navigation">
 				<ul id="menu-navigation" class="nav top-nav cf">
 											<?php
-			$args = array( 'posts_per_page' => 10, 'order'=> 'DESC', 'orderby' => 'date' );	
+			$args = array( 'posts_per_page' => 5, 'order'=> 'DESC', 'orderby' => 'date' );	
 			$postslist = get_posts( $args );
 			foreach ( $postslist as $post ) :
   			setup_postdata( $post ); ?> 

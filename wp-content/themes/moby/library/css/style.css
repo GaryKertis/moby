@@ -499,13 +499,16 @@ FONT FACE (IN YOUR FACE)
 */
 @font-face {
   font-family: "AntiqueOliveW01-Compact";
-  src: url("../../library/fonts/AdobeAntiqueOliveStdCompact.otf") format("opentype"); }
+  src: url("../../library/fonts/AdobeAntiqueOliveStdCompact.eot");
+  src: url("../../library/fonts/AdobeAntiqueOliveStdCompact.eot?#iefix") format("embedded-opentype"), url("../../library/fonts/AdobeAntiqueOliveStdCompact.woff") format("woff"), url("../../library/fonts/AdobeAntiqueOliveStdCompact.ttf") format("truetype"), url("../../library/fonts/AdobeAntiqueOliveStdCompact.svg#AntiqueOliveW01-Compact") format("svg"), url("../../library/fonts/AdobeAntiqueOliveStdCompact.otf") format("opentype"); }
 @font-face {
   font-family: "ITC Galliard W01 Roman";
-  src: url("../../library/fonts/Adobe - GalliardStd-Roman.otf") format("opentype"); }
+  src: url("../../library/fonts/Adobe - GalliardStd-Roman.eot");
+  src: url("../../library/fonts/Adobe - GalliardStd-Roman.eot?#iefix") format("embedded-opentype"), url("../../library/fonts/Adobe - GalliardStd-Roman.woff") format("woff"), url("../../library/fonts/Adobe - GalliardStd-Roman.ttf") format("truetype"), url("../../library/fonts/Adobe - GalliardStd-Roman.svg#ITC Galliard W01 Roman") format("svg"), url("../../library/fonts/Adobe - GalliardStd-Roman.otf") format("opentype"); }
 @font-face {
   font-family: "Gill Sans W01 Light";
-  src: url("../../library/fonts/Adobe - GillSansStd-Light.otf") format("opentype"); }
+  src: url("../../library/fonts/Adobe - GillSansStd-Light.eot");
+  src: url("../../library/fonts/Adobe - GillSansStd-Light.eot?#iefix") format("embedded-opentype"), url("../../library/fonts/Adobe - GillSansStd-Light.woff") format("woff"), url("../../library/fonts/Adobe - GillSansStd-Light.ttf") format("truetype"), url("../../library/fonts/Adobe - GillSansStd-Light.svg#Gill Sans W01 Light") format("svg"), url("../../library/fonts/Adobe - GillSansStd-Light.otf") format("opentype"); }
 /*
 The following is based of Typebase:
 https://github.com/devinhunt/typebase.css
@@ -1323,13 +1326,15 @@ HEADER STYLES
   -moz-column-count: 4;
   /* Firefox */
   column-count: 4;
-  padding-right: 0px;
   text-align: left; }
+
+.crew .entry-content {
+  padding-right: 0px; }
 
 .map {
   width: 300px;
   height: 300px;
-  margin: auto; }
+  margin-left: auto; }
 
 .tag-ports .entry-content img {
   max-width: 300px; }
@@ -1385,6 +1390,29 @@ HEADER STYLES
   background: url("../images/whaletail 01.svg") center top;
   background-repeat: no-repeat; }
 
+#email {
+  background: url("../images/email bottle 01.svg") center top no-repeat;
+  background-size: contain; }
+
+#address {
+  background: url("../images/map marker 01.svg") center top no-repeat;
+  background-size: contain; }
+
+#phone {
+  background: url("../images/Phone 02.svg") center top no-repeat;
+  background-size: contain; }
+
+.contact {
+  height: 100px; }
+
+.contact-image {
+  width: 100%;
+  height: 100%;
+  display: none; }
+
+.contact:nth-child(3) {
+  padding-right: 0px; }
+
 .texture {
   width: 100%;
   height: 100%;
@@ -1427,7 +1455,7 @@ and more scalable.
   text-align: justify;
   margin: auto; }
 
-.navigation {
+.navigation, .map {
   display: none; }
 
 .nav {
@@ -1633,6 +1661,14 @@ view.
   padding-bottom: 4em;
   display: table; }
 
+.question {
+  font-style: italic;
+  font-size: 1.5em;
+  text-align: left; }
+
+.answer {
+  width: 50%; }
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -1768,11 +1804,18 @@ you can add resource intensive styles.
   /*********************
   LAYOUT & GRID STYLES
   *********************/
+  .entry-content {
+    padding-left: 0px;
+    padding-right: 0px; }
+
   .post, #inner-header, .nav {
     width: 760px; }
 
-  .navigation {
+  .navigation, .map, .contact-image {
     display: block; }
+
+  .contact {
+    height: 300px; }
 
   /*********************
   HEADER STYLES

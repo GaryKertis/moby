@@ -19,18 +19,7 @@
 									</p> -->
 
 								</header>
-								<?php if(has_tag('about')) {
-									echo '<h1 class="h1 entry-title">'; 
-									the_title();
-									echo '</h1>';
-									echo '<section class="entry-content cf m-all t-1of2 d-1of2">';
-									the_content();
-									echo '</section>';
-								if ( has_post_thumbnail() ) { 
-									echo '<section class="m-all t-1of2 d-1of2 last-col alignright filter">';
-									the_post_thumbnail('large');
-									echo '</section>'; } 
-								} else if(has_tag('crew')){
+								<?php if(has_tag('crew')){
 									echo '<h1 class="h1 entry-title">'; 
 									the_title();
 									echo '</h1>';

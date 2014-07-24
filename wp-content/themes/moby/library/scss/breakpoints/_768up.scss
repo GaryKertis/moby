@@ -23,11 +23,20 @@ body {}
 LAYOUT & GRID STYLES
 *********************/
 
+.entry-content {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
 .post, #inner-header, .nav {
 	width: 760px;
 }
 
-.navigation {display: block}
+.navigation, .map, .contact-image {display: block}
+
+.contact {
+	height: 300px;
+}
 
 /*********************
 HEADER STYLES
