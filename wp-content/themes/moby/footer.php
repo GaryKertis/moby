@@ -176,10 +176,10 @@
                 });
 
                 var infowindow = new google.maps.InfoWindow({ // Create a new InfoWindow
-                content:"<h3>Snowdown Summit Cafe</h3><p>Railway Drive-through available.</p>" // HTML contents of the InfoWindow
+                content:jQuery('.horizontal .description')[index].innerHTML // HTML contents of the InfoWindow
                 });
 
-                google.maps.event.addListener(marker, 'load', function() { // Add a Click Listener to our marker
+                google.maps.event.addListener(marker, 'click', function() { // Add a Click Listener to our marker
                 infowindow.open(map,marker); // Open our InfoWindow
                 });
 
