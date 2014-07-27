@@ -23,19 +23,35 @@ body {}
 LAYOUT & GRID STYLES
 *********************/
 
-.entry-content {
-	padding-left: 0px;
-	padding-right: 0px;
-}
+
 
 .post, #inner-header, .nav {
-	width: 760px;
+	width: 750px;
 }
 
-.navigation, .map, .contact-image {display: block}
 
-.contact {
-	height: 300px;
+.navigation, .map {display: block}
+
+.contact-image, .about-bottom-row .image {
+	height: 200px;
+}
+
+.crew {
+    -webkit-column-count: 4; /* Chrome, Safari, Opera */
+    -moz-column-count: 4; /* Firefox */
+    column-count: 4;
+ }
+
+ .question {
+	font-style: italic;
+	font-size: 1.5em;
+	text-align: left;
+	padding-top: 1em;
+	font-weight: normal;
+}
+
+.answer {
+	width: 50%;
 }
 
 /*********************
@@ -49,11 +65,11 @@ HEADER STYLES
 
 
 		.red {
-			font-size: 2.9em;
+			font-size: 2.86em;
 		}
 
 		.blue {
-			font-size: 2.9em;
+			font-size: 2.86em;
 			letter-spacing: .5px;
 		}
 	}

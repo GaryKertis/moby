@@ -108,6 +108,7 @@ POSTS & CONTENT STYLES
 /* entry content */
 .entry-content {
 			padding-left: 0;
+			padding-right: 0;
 			
 
 
@@ -146,17 +147,3 @@ do they need tweaking?
 	}
 } /* end .footer-links */
 
-// the last column
-.last-col {
-  float: right;
-  padding-right: 0 !important;
-    width: 50%;
-    margin-top: -2.5em;
-    margin-bottom: auto;
-    height: 100%;
-}
-
-.last-col img {
-  max-width: 100%;
-  height: auto;
-}

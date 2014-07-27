@@ -651,6 +651,15 @@ own grids. It's better in the long run and allows you full control
 over your project's layout.
 
 ******************************************************************/
+.last-col {
+  float: right;
+  padding-right: 0 !important;
+  margin-right: 0px !important; }
+
+.last-col img {
+  max-width: 100%;
+  height: auto; }
+
 /*
 Mobile Grid Styles
 These are the widths for the mobile grid.
@@ -660,7 +669,6 @@ them however you see fit.
 @media (max-width: 767px) {
   .m-all {
     float: left;
-    padding-right: 2em;
     width: 100%;
     padding-right: 0; }
 
@@ -669,191 +677,159 @@ them however you see fit.
 
   .m-1of2 {
     float: left;
-    padding-right: 2em;
     width: 50%; }
 
   .m-1of3 {
     float: left;
-    padding-right: 2em;
-    width: 33.33%; }
+    width: 32%;
+    margin-right: 2%; }
 
   .m-2of3 {
     float: left;
-    padding-right: 2em;
     width: 66.66%; }
 
   .m-1of4 {
     float: left;
-    padding-right: 2em;
     width: 25%; }
 
   .m-3of4 {
     float: left;
-    padding-right: 2em;
     width: 75%; } }
 /* Portrait tablet to landscape */
 @media (min-width: 768px) and (max-width: 1029px) {
   .t-all {
     float: left;
-    padding-right: 2em;
     width: 100%;
     padding-right: 0; }
 
   .t-1of2 {
     float: left;
-    padding-right: 2em;
-    width: 50%; }
+    width: 47.5%;
+    margin-right: 5%; }
 
   .t-1of3 {
     float: left;
-    padding-right: 2em;
-    width: 33.33%; }
+    width: 30%;
+    margin-right: 5%; }
 
   .t-2of3 {
     float: left;
-    padding-right: 2em;
     width: 66.66%; }
 
   .t-1of4 {
     float: left;
-    padding-right: 2em;
     width: 25%; }
 
   .t-3of4 {
     float: left;
-    padding-right: 2em;
     width: 75%; }
 
   .t-1of5 {
     float: left;
-    padding-right: 2em;
     width: 20%; }
 
   .t-2of5 {
     float: left;
-    padding-right: 2em;
     width: 40%; }
 
   .t-3of5 {
     float: left;
-    padding-right: 2em;
     width: 60%; }
 
   .t-4of5 {
     float: left;
-    padding-right: 2em;
     width: 80%; } }
 /* Landscape to small desktop */
 @media (min-width: 1030px) {
   .d-all {
     float: left;
-    padding-right: 2em;
     width: 100%;
     padding-right: 0; }
 
   .d-1of2 {
     float: left;
-    padding-right: 2em;
-    width: 50%; }
+    width: 47.5%;
+    margin-right: 5%; }
 
   .d-1of3 {
     float: left;
-    padding-right: 2em;
-    width: 33.33%; }
+    width: 30%;
+    margin-right: 5%; }
 
   .d-2of3 {
     float: left;
-    padding-right: 2em;
     width: 66.66%; }
 
   .d-1of4 {
     float: left;
-    padding-right: 2em;
     width: 25%; }
 
   .d-3of4 {
     float: left;
-    padding-right: 2em;
     width: 75%; }
 
   .d-1of5 {
     float: left;
-    padding-right: 2em;
     width: 20%; }
 
   .d-2of5 {
     float: left;
-    padding-right: 2em;
     width: 40%; }
 
   .d-3of5 {
     float: left;
-    padding-right: 2em;
     width: 60%; }
 
   .d-4of5 {
     float: left;
-    padding-right: 2em;
     width: 80%; }
 
   .d-1of6 {
     float: left;
-    padding-right: 2em;
     width: 16.6666666667%; }
 
   .d-1of7 {
     float: left;
-    padding-right: 2em;
     width: 14.2857142857%; }
 
   .d-2of7 {
     float: left;
-    padding-right: 2em;
     width: 28.5714286%; }
 
   .d-3of7 {
     float: left;
-    padding-right: 2em;
     width: 42.8571429%; }
 
   .d-4of7 {
     float: left;
-    padding-right: 2em;
     width: 57.1428572%; }
 
   .d-5of7 {
     float: left;
-    padding-right: 2em;
     width: 71.4285715%; }
 
   .d-6of7 {
     float: left;
-    padding-right: 2em;
     width: 85.7142857%; }
 
   .d-1of8 {
     float: left;
-    padding-right: 2em;
     width: 12.5%; }
 
   .d-1of9 {
     float: left;
-    padding-right: 2em;
     width: 11.1111111111%; }
 
   .d-1of10 {
     float: left;
-    padding-right: 2em;
     width: 10%; }
 
   .d-1of11 {
     float: left;
-    padding-right: 2em;
     width: 9.09090909091%; }
 
   .d-1of12 {
     float: left;
-    padding-right: 2em;
     width: 8.33%; } }
 /*********************
 IMPORTING MODULES
@@ -1321,11 +1297,6 @@ h1, .h1 {
 HEADER STYLES
 *********************/
 .crew {
-  -webkit-column-count: 4;
-  /* Chrome, Safari, Opera */
-  -moz-column-count: 4;
-  /* Firefox */
-  column-count: 4;
   text-align: left; }
 
 .crew .entry-content {
@@ -1334,7 +1305,8 @@ HEADER STYLES
 .map {
   width: 300px;
   height: 300px;
-  margin-left: auto; }
+  margin-left: auto;
+  border: 1px solid #00516c; }
 
 .tag-ports .entry-content img {
   max-width: 300px; }
@@ -1391,24 +1363,44 @@ HEADER STYLES
   background-repeat: no-repeat; }
 
 #email {
-  background: url("../images/email bottle 01.svg") center top no-repeat;
+  background: url("../images/email bottle 01.svg") center center no-repeat;
   background-size: contain; }
 
 #address {
-  background: url("../images/map marker 01.svg") center top no-repeat;
+  background: url("../images/map marker 01.svg") center center no-repeat;
   background-size: contain; }
 
 #phone {
-  background: url("../images/Phone 02.svg") center top no-repeat;
+  background: url("../images/Phone 02.svg") center center no-repeat;
   background-size: contain; }
 
 .contact {
-  height: 100px; }
+  text-align: center; }
 
 .contact-image {
-  width: 100%;
-  height: 100%;
-  display: none; }
+  height: 100px; }
+
+.press {
+  min-height: 150px;
+  padding-top: 2em; }
+
+.byline {
+  text-align: right;
+  padding-top: 1em; }
+
+#about-image, .about-bottom-row .image {
+  background: url("../images/anchor 01.svg") center center no-repeat; }
+
+.about-bottom-row {
+  clear: both;
+  padding-top: 4em; }
+
+.about-bottom-row .image {
+  min-height: 100px;
+  background-size: 100% 100%; }
+
+#about-image {
+  height: 400px; }
 
 .contact:nth-child(3) {
   padding-right: 0px; }
@@ -1422,7 +1414,7 @@ HEADER STYLES
 #main .mywaves:first-child .whale {
   display: block; }
 
-#main .mywaves:first-child .post {
+#main .mywaves:first-child .post, #main .mywaves:last-child .post {
   padding-bottom: 0px; }
 
 .waves {
@@ -1434,11 +1426,11 @@ HEADER STYLES
   text-align: left; }
   #logo .red {
     color: #ff4d31;
-    font-size: 1em;
+    font-size: 1.05em;
     margin-bottom: 10px !important; }
   #logo .blue {
     color: #2980b9;
-    font-size: 1em;
+    font-size: 1.05em;
     line-height: .6em; }
 
 /*********************
@@ -1535,8 +1527,9 @@ POSTS & CONTENT STYLES
 .entry-content {
   margin-top: .5em;
   text-align: justify;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-bottom: 2em;
   /*
   image alignment on a screen this size may be
   a bit difficult. It's set to start aligning
@@ -1661,13 +1654,17 @@ view.
   padding-bottom: 4em;
   display: table; }
 
+.faq {
+  margin-bottom: 1.5em; }
+
 .question {
   font-style: italic;
-  font-size: 1.5em;
-  text-align: left; }
+  font-weight: bold;
+  text-align: left;
+  padding-top: 1em; }
 
 .answer {
-  width: 50%; }
+  padding-top: .5em; }
 
 /*********************
 LARGER MOBILE DEVICES
@@ -1743,6 +1740,7 @@ tweeners.
   /* entry content */
   .entry-content {
     padding-left: 0;
+    padding-right: 0;
     /* at this larger size, we can start to align images */ }
     .entry-content .alignleft, .entry-content img.alignleft {
       margin-right: 1.5em;
@@ -1766,18 +1764,7 @@ tweeners.
   check your menus here. do they look good?
   do they need tweaking?
   */
-  /* end .footer-links */
-  .last-col {
-    float: right;
-    padding-right: 0 !important;
-    width: 50%;
-    margin-top: -2.5em;
-    margin-bottom: auto;
-    height: 100%; }
-
-  .last-col img {
-    max-width: 100%;
-    height: auto; } }
+  /* end .footer-links */ }
 /*********************
 TABLET & SMALLER LAPTOPS
 This is the average viewing window. So Desktops, Laptops, and
@@ -1804,26 +1791,39 @@ you can add resource intensive styles.
   /*********************
   LAYOUT & GRID STYLES
   *********************/
-  .entry-content {
-    padding-left: 0px;
-    padding-right: 0px; }
-
   .post, #inner-header, .nav {
-    width: 760px; }
+    width: 750px; }
 
-  .navigation, .map, .contact-image {
+  .navigation, .map {
     display: block; }
 
-  .contact {
-    height: 300px; }
+  .contact-image, .about-bottom-row .image {
+    height: 200px; }
+
+  .crew {
+    -webkit-column-count: 4;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 4;
+    /* Firefox */
+    column-count: 4; }
+
+  .question {
+    font-style: italic;
+    font-size: 1.5em;
+    text-align: left;
+    padding-top: 1em;
+    font-weight: normal; }
+
+  .answer {
+    width: 50%; }
 
   /*********************
   HEADER STYLES
   *********************/
   #logo .red {
-    font-size: 2.9em; }
+    font-size: 2.86em; }
   #logo .blue {
-    font-size: 2.9em;
+    font-size: 2.86em;
     letter-spacing: .5px; }
 
   /*********************
@@ -1952,12 +1952,15 @@ you can add resource intensive styles.
   
   ******************************************************************/
   .post, #inner-header, .nav {
-    width: 1040px; }
+    width: 1030px; }
+
+  .contact-image, .about-bottom-row .image {
+    height: 300px; }
 
   #logo .red {
-    font-size: 3.95em; }
+    font-size: 3.91em; }
   #logo .blue {
-    font-size: 3.95em;
+    font-size: 3.91em;
     letter-spacing: .7px; } }
 /*********************
 LARGE VIEWING SIZE

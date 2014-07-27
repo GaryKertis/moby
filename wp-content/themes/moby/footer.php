@@ -2,7 +2,7 @@
 
 				<div id="inner-footer" class="wrap cf">
 
-					<nav role="navigation">
+					<nav role="navigation" class="footer-navigation">
 						<?php wp_nav_menu(array(
     					'container' => '',                              // remove nav container
     					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
@@ -71,7 +71,6 @@
                             //50% in view, begin animation.
 
                             postPos = newPos - (jQuery('.whale').offset().top - 100);
-                            console.log(postPos);
                             if (postPos <= jQuery(window).height()/2) jQuery('.whale').css({'background-position': 'center '+postPos+'px'});
 ;
 

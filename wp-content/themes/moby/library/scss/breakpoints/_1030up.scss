@@ -10,17 +10,21 @@ be seen on the Desktop.
 ******************************************************************/
 
 .post, #inner-header, .nav {
-  width: 1040px;
+  width: 1030px;
+}
+
+.contact-image, .about-bottom-row .image {
+	height: 300px;
 }
 
 	#logo {
 
 		.red {
-			font-size: 3.95em;
+			font-size: 3.91em;
 		}
 
 		.blue {
-			font-size: 3.95em;
+			font-size: 3.91em;
 			letter-spacing: .7px;
 		}
 	}
