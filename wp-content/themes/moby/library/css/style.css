@@ -498,9 +498,17 @@ FONT FACE (IN YOUR FACE)
   }
 */
 @font-face {
+  font-family: 'AftaserifRegular';
+  src: url("AftaSerifThin-Regular-webfont.eot");
+  src: url("AftaSerifThin-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("AftaSerifThin-Regular-webfont.woff") format("woff"), url("AftaSerifThin-Regular-webfont.ttf") format("truetype"), url("AftaSerifThin-Regular-webfont.svg#AftaserifRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
   font-family: "AntiqueOliveW01-Compact";
   src: url("../../library/fonts/AdobeAntiqueOliveStdCompact.eot");
-  src: url("../../library/fonts/AdobeAntiqueOliveStdCompact.eot?#iefix") format("embedded-opentype"), url("../../library/fonts/AdobeAntiqueOliveStdCompact.woff") format("woff"), url("../../library/fonts/AdobeAntiqueOliveStdCompact.ttf") format("truetype"), url("../../library/fonts/AdobeAntiqueOliveStdCompact.svg#AntiqueOliveW01-Compact") format("svg"), url("../../library/fonts/AdobeAntiqueOliveStdCompact.otf") format("opentype"); }
+  src: url("../../library/fonts/AdobeAntiqueOliveStdCompact.eot?#iefix") format("embedded-opentype"), url("../../library/fonts/AdobeAntiqueOliveStdCompact.woff") format("woff"), url("../../library/fonts/AdobeAntiqueOliveStdCompact.ttf") format("truetype"), url("../../library/fonts/AdobeAntiqueOliveStdCompact.svg#AntiqueOliveW01-Compact") format("svg"), url("../../library/fonts/AdobeAntiqueOliveStdCompact.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
 @font-face {
   font-family: "ITC Galliard W01 Roman";
   src: url("../../library/fonts/Adobe - GalliardStd-Roman.eot");
@@ -1418,7 +1426,7 @@ HEADER STYLES
   padding-bottom: 0px; }
 
 .waves {
-  margin-bottom: -10px; }
+  margin-bottom: -12px; }
 
 #logo {
   margin: 0.75em 0;

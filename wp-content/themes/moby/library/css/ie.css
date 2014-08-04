@@ -120,6 +120,24 @@ them in here, they won't work.
 /*********************
 NAVIGATION STYLES
 *********************/
+.post {
+  padding-top: 6em;
+  padding-bottom: 8em; }
+
+.article-header h1 {
+  font-size: 2.5em; }
+
+#logo {
+  text-align: left; }
+  #logo .red {
+    font-size: 2em; }
+  #logo .blue {
+    font-size: 2em;
+    letter-spacing: .5px; }
+
+#inner-header {
+  width: 538px; }
+
 /* .menu is clearfixed inside mixins.scss */
 .menu {
   /* end .menu ul */ }
@@ -129,7 +147,7 @@ NAVIGATION STYLES
     /* end current highlighters */ }
     .menu ul li {
       /*
-      plan your menus and drop-downs wisely.
+      plan your menus and drop-docns wisely.
       */ }
       .menu ul li a {
         /*
@@ -143,6 +161,8 @@ POSTS & CONTENT STYLES
 *********************/
 /* entry content */
 .entry-content {
+  padding-left: 0;
+  padding-right: 0;
   /* at this larger size, we can start to align images */ }
   .entry-content .alignleft, .entry-content img.alignleft {
     margin-right: 1.5em;
@@ -186,12 +206,41 @@ GENERAL STYLES
 /*********************
 LAYOUT & GRID STYLES
 *********************/
-.wrap {
-  width: 760px; }
+.post, #inner-header, .nav {
+  width: 750px; }
+
+.navigation, .map {
+  display: block; }
+
+.contact-image, .about-bottom-row .image {
+  height: 200px; }
+
+.crew {
+  -webkit-column-count: 4;
+  /* Chrome, Safari, Opera */
+  -moz-column-count: 4;
+  /* Firefox */
+  column-count: 4; }
+
+.question {
+  font-style: italic;
+  font-size: 1.5em;
+  text-align: left;
+  padding-top: 1em;
+  font-weight: normal; }
+
+.answer {
+  width: 50%; }
 
 /*********************
 HEADER STYLES
 *********************/
+#logo .red {
+  font-size: 2.86em; }
+#logo .blue {
+  font-size: 2.86em;
+  letter-spacing: .5px; }
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -201,9 +250,9 @@ NAVIGATION STYLES
   /* highlight current page */
   /* end current highlighters */ }
   .nav ul {
+    background: #2c2e2e;
     margin-top: 0; }
   .nav li {
-    float: left;
     position: relative;
     /*
     plan your menus and drop-downs wisely.
@@ -216,15 +265,14 @@ NAVIGATION STYLES
       has the possibility of being a mobile device.
       */ }
       .nav li a:hover, .nav li a:focus {
-        color: white;
-        text-decoration: underline; }
+        color: #f3d03e;
+        text-decoration: none; }
     .nav li ul.sub-menu,
     .nav li ul.children {
       margin-top: 0;
       border: 1px solid #ccc;
       border-top: 0;
       position: absolute;
-      overflow: hidden;
       visibility: hidden;
       z-index: 8999;
       /* highlight sub-menu current page */ }
@@ -245,9 +293,12 @@ NAVIGATION STYLES
         .nav li ul.sub-menu li:last-child a,
         .nav li ul.children li:last-child a {
           border-bottom: 0; }
-    .nav li:hover ul {
+        .nav li ul.sub-menu li ul,
+        .nav li ul.children li ul {
+          top: 0;
+          left: 100%; }
+    .nav li:hover > ul {
       top: auto;
-      overflow: visible;
       visibility: visible; }
 
 /* end .nav */
@@ -308,8 +359,17 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
-.wrap {
-  width: 1040px; }
+.post, #inner-header, .nav {
+  width: 1030px; }
+
+.contact-image, .about-bottom-row .image {
+  height: 300px; }
+
+#logo .red {
+  font-size: 3.91em; }
+#logo .blue {
+  font-size: 3.91em;
+  letter-spacing: .7px; }
 
 /*
 you can call the larger styles if you want, but there's really no need
@@ -334,3 +394,6 @@ header.php file to see what they are:
 .lt-ie8 .class { ... }
 
 */
+.post-wrapper {
+  background-color: #e8eeea;
+  border: 1px solid #d0e0d6; }
