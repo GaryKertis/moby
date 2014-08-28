@@ -50,10 +50,11 @@
 											<?php
 			$args = array( 'posts_per_page' => 5, 'order'=> 'DESC', 'orderby' => 'date' );	
 			$postslist = get_posts( $args );
+			wp_list_pages('title_li=');
 			foreach ( $postslist as $post ) :
   			setup_postdata( $post ); ?> 
 			<li id="menu-item-<?php the_id(); ?>" class="menu-item">
-				<a class="scroll" href="#post-<?php the_id(); ?>"><?php the_title(); ?></a>
+				<a class="<?php if (is_front_page()) {echo 'scroll';}?>" href="<?php if (!is_home()) {echo explode('?',site_url())[0];}?>#post-<?php the_id(); ?>"><?php the_title(); ?></a>
 			</li><?php
 			endforeach; 
 			wp_reset_postdata();

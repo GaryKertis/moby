@@ -1500,7 +1500,7 @@ and more scalable.
 .nav:first-child a {
   padding-left: 0px; }
 
-.nav:last-child a {
+.nav:last-child li {
   padding-right: 0px; }
 
 /*********************

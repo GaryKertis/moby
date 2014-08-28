@@ -2,6 +2,27 @@
 
 				<div id="inner-footer" class="wrap cf">
 
+
+
+                    <?php if (have_posts()) : while (have_posts()) : the_post();
+
+                                if(has_tag('footer')){
+                                echo '<div class="post_wrapper">';
+                                echo '<article id="post-<?php the_ID(); ?>" class="';
+                                echo post_class( 'cf' );
+                                echo '" role="article">';
+                                    echo '<h1 class="h1 entry-title">'; 
+                                    echo the_title();
+                                    echo '</h1>';
+                                    echo '<section class="entry-content cf footer">';
+                                    echo the_content();
+                                    echo '</section>';
+                                    echo '</article>';
+                                    echo '</div>';}
+                    endwhile;
+                    endif;
+                    ?>
+
 					<nav role="navigation" class="footer-navigation">
 						<?php wp_nav_menu(array(
     					'container' => '',                              // remove nav container

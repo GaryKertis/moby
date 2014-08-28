@@ -7,6 +7,7 @@
 						<div id="main" class="m-all cf" role="main">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							<?php if(!has_tag('footer')) : ?>
 							<div id="post-<?php the_ID(); ?>" class="mywaves">
 							<canvas id="waves-<?php the_ID(); ?>" class="waves" width="100%" height="100px"></canvas>
 							<div class="post_wrapper">
@@ -38,7 +39,7 @@
 									the_content();
 									echo '</section>';
 								}
-
+					
 									?>
 
 
@@ -62,7 +63,8 @@
 					</div>
 						</div>
 						</div>
-							<?php endwhile; ?>
+
+							<?php endif; endwhile; ?>
 
 									<?php bones_page_navi(); ?>
 
