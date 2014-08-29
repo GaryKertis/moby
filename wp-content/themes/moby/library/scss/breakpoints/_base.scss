@@ -121,6 +121,19 @@ HEADER STYLES
 	border: 1px solid $dark-blue;
 }
 
+#infowindow {
+	width: 150px;
+	height:60px;
+	overflow:hidden;
+	text-align:left;
+	color: $dark-blue;
+	font-weight: bold;
+}
+
+.infowindowcontent {
+	display: none;
+}
+
 .tag-ports .entry-content img {
 	max-width: 300px;
 }

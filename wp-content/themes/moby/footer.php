@@ -192,17 +192,16 @@
                   var marker = new google.maps.Marker({
                     position: latLng,
                     map: map,
-                    title: 'Hello World!',
                     icon: '<?php echo get_template_directory_uri(); ?>/library/images/map marker 02.svg'
                 });
 
                 var infowindow = new google.maps.InfoWindow({ // Create a new InfoWindow
-                content:jQuery('.horizontal .description')[index].innerHTML // HTML contents of the InfoWindow
+                content:'<div id="infowindow">' + jQuery('.infowindowcontent')[index].innerHTML + '</div>'// HTML contents of the InfoWindow
                 });
 
-                google.maps.event.addListener(marker, 'click', function() { // Add a Click Listener to our marker
+                //google.maps.event.addListener(marker, 'click', function() { // Add a Click Listener to our marker
                 infowindow.open(map,marker); // Open our InfoWindow
-                });
+                //});
 
               });
             }

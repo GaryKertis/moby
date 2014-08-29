@@ -1316,6 +1316,17 @@ HEADER STYLES
   margin-left: auto;
   border: 1px solid #00516c; }
 
+#infowindow {
+  width: 150px;
+  height: 60px;
+  overflow: hidden;
+  text-align: left;
+  color: #00516c;
+  font-weight: bold; }
+
+.infowindowcontent {
+  display: none; }
+
 .tag-ports .entry-content img {
   max-width: 300px; }
 
