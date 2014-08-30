@@ -17,6 +17,11 @@ be seen on the Desktop.
 	height: 300px;
 }
 
+.nyc {
+	width: round(1030px * .233);
+	height: round(1030px * .233 *.27);
+}
+
 	#logo {
 
 		.red {
@@ -29,4 +34,17 @@ be seen on the Desktop.
 		}
 	}
 
-
+#year {
+	color: $white;
+	font-family: 'Gill Sans W01 Light';
+	font-size: 1em;
+	top: -57px;
+	right: 0px;
+	width: 40px;
+	left: 100%;
+	font-weight: bold;
+	margin-left: -42px;
+	text-align: center;
+	position: relative;
+	display: block;
+}

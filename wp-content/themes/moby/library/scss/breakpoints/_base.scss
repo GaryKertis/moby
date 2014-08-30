@@ -93,7 +93,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-	font-size: 2.5em;
+	font-size: 1.5em;
 	line-height: 1;
 }
 
@@ -142,7 +142,7 @@ HEADER STYLES
 
 .letter {
 	font-family: $galliard;
-	font-size: 2.5em;
+	font-size: 1.5em;
 	padding-bottom: 5px;
 }
 
@@ -155,6 +155,14 @@ HEADER STYLES
 	position: fixed;
 	z-index: -10;
 	top: 60px;
+}
+
+#year {
+	display: none;
+}
+
+.header h1, .header .h1 {
+	font-size: 2.5em;
 }
 
 #inner-header {
@@ -202,6 +210,14 @@ HEADER STYLES
 
 #email {
 	background:url('../images/email bottle 01.svg') center center no-repeat;
+	background-size: contain;
+}
+
+.nyc {
+	width: round(265px * .233);
+	height: round(265px * .233 *.27);
+	margin: auto;
+	background:url('../images/NYC 01.svg') center center no-repeat;
 	background-size: contain;
 }
 
@@ -625,6 +641,29 @@ FOOTER STYLES
 	clear: both;
 	background-color: $dark-blue;
 	color: $light-gray;
+	margin-top: -50px;
+}
+
+.footer .entry-title {
+		color: $white;
+		margin-top: .75em;
+}
+
+
+
+.tag-footer {
+	padding-bottom: 0px!important; 
+	padding-top: 2em!important;
+}
+
+.post .footer {
+	margin-top: 0px;
+	padding: 0px;
+}
+
+#waves-1000 {
+	position: relative;
+	top: -50px;
 }
 
 .footer .nav li a {
@@ -681,4 +720,8 @@ FOOTER STYLES
 
 .answer {
 	padding-top: .5em;
+}
+
+#donate {
+	text-align: center;
 }

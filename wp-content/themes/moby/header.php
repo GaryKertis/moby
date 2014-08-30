@@ -42,7 +42,7 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-
+				
 		<div id="container">
 
 			<nav role="navigation" class="navigation">
@@ -63,12 +63,12 @@
 			</nav>
 
 			<header class="header" role="banner">
-
 				<div id="inner-header" class="wrap cf">
 					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
 					<p id="logo" class="h1"><span class="red"><?php bloginfo('name'); ?></span>
 						<br /><span class="blue"><?php bloginfo('description'); ?></span></p>
-						<span class="nyc">NYC</span></p>
-
+						<div id="year">2014</div>
+						<div class="nyc">&nbsp;</div>
 				</div>
+				
 			</header>

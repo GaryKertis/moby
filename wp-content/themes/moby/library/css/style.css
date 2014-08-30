@@ -1295,7 +1295,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
     text-decoration: none; }
 
 h1, .h1 {
-  font-size: 2.5em;
+  font-size: 1.5em;
   line-height: 1; }
 
 .article-header h1 {
@@ -1335,7 +1335,7 @@ HEADER STYLES
 
 .letter {
   font-family: "ITC Galliard W01 Roman";
-  font-size: 2.5em;
+  font-size: 1.5em;
   padding-bottom: 5px; }
 
 .header {
@@ -1346,6 +1346,12 @@ HEADER STYLES
   position: fixed;
   z-index: -10;
   top: 60px; }
+
+#year {
+  display: none; }
+
+.header h1, .header .h1 {
+  font-size: 2.5em; }
 
 #inner-header {
   white-space: nowrap;
@@ -1383,6 +1389,13 @@ HEADER STYLES
 
 #email {
   background: url("../images/email bottle 01.svg") center center no-repeat;
+  background-size: contain; }
+
+.nyc {
+  width: 62px;
+  height: 17px;
+  margin: auto;
+  background: url("../images/NYC 01.svg") center center no-repeat;
   background-size: contain; }
 
 #address {
@@ -1643,7 +1656,24 @@ FOOTER STYLES
 .footer {
   clear: both;
   background-color: #00516c;
-  color: #e8eeea; }
+  color: #e8eeea;
+  margin-top: -50px; }
+
+.footer .entry-title {
+  color: white;
+  margin-top: .75em; }
+
+.tag-footer {
+  padding-bottom: 0px !important;
+  padding-top: 2em !important; }
+
+.post .footer {
+  margin-top: 0px;
+  padding: 0px; }
+
+#waves-1000 {
+  position: relative;
+  top: -50px; }
 
 .footer .nav li a {
   color: white; }
@@ -1684,6 +1714,9 @@ view.
 .answer {
   padding-top: .5em; }
 
+#donate {
+  text-align: center; }
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -1720,7 +1753,14 @@ tweeners.
     padding-top: 6em;
     padding-bottom: 8em; }
 
+  h1, .h1 {
+    font-size: 2.5em;
+    line-height: 1; }
+
   .article-header h1 {
+    font-size: 2.5em; }
+
+  .letter {
     font-size: 2.5em; }
 
   #logo {
@@ -1733,6 +1773,10 @@ tweeners.
 
   #inner-header {
     width: 538px; }
+
+  .nyc {
+    width: 125px;
+    height: 34px; }
 
   /* .menu is clearfixed inside mixins.scss */
   .menu {
@@ -1811,6 +1855,10 @@ you can add resource intensive styles.
   *********************/
   .post, #inner-header, .nav {
     width: 750px; }
+
+  .nyc {
+    width: 175px;
+    height: 47px; }
 
   .navigation, .map {
     display: block; }
@@ -1975,11 +2023,29 @@ you can add resource intensive styles.
   .contact-image, .about-bottom-row .image {
     height: 300px; }
 
+  .nyc {
+    width: 240px;
+    height: 65px; }
+
   #logo .red {
     font-size: 3.91em; }
   #logo .blue {
     font-size: 3.91em;
-    letter-spacing: .7px; } }
+    letter-spacing: .7px; }
+
+  #year {
+    color: white;
+    font-family: 'Gill Sans W01 Light';
+    font-size: 1em;
+    top: -57px;
+    right: 0px;
+    width: 40px;
+    left: 100%;
+    font-weight: bold;
+    margin-left: -42px;
+    text-align: center;
+    position: relative;
+    display: block; } }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.

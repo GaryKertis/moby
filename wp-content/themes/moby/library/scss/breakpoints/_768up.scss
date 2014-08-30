@@ -29,6 +29,11 @@ LAYOUT & GRID STYLES
 	width: 750px;
 }
 
+.nyc {
+	width: round(750px * .233);
+	height: round(750px * .233 *.27);
+}
+
 
 .navigation, .map {display: block}
 

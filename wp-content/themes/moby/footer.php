@@ -1,24 +1,28 @@
-			<footer class="footer" role="contentinfo">
+			<canvas id="waves-1000" class="waves" width="100%" height="100px"></canvas>
+            <footer class="footer" role="contentinfo">
 
+                            
 				<div id="inner-footer" class="wrap cf">
-
-
 
                     <?php if (have_posts()) : while (have_posts()) : the_post();
 
                                 if(has_tag('footer')){
                                 echo '<div class="post_wrapper">';
-                                echo '<article id="post-<?php the_ID(); ?>" class="';
+                                echo '<article id="post-';
+                                echo the_ID() . '"';
                                 echo post_class( 'cf' );
-                                echo '" role="article">';
+                                echo 'role="article">';
+                                    echo '<hr>';
                                     echo '<h1 class="h1 entry-title">'; 
                                     echo the_title();
                                     echo '</h1>';
                                     echo '<section class="entry-content cf footer">';
                                     echo the_content();
                                     echo '</section>';
+                                    echo '<hr>';
                                     echo '</article>';
-                                    echo '</div>';}
+                                    echo '</div>';
+                                    }
                     endwhile;
                     endif;
                     ?>
@@ -39,7 +43,16 @@
 						)); ?>
 					</nav>
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+                    <div id="donate">
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="BRMQNDXEAUK2J">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+                    </div>
+
+					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> MOBY-DICK MARATHON NYC.</p>
 
 				</div>
 
@@ -51,7 +64,7 @@
 		<?php wp_footer(); ?>
 		<script type="text/javascript">
 
-
+              jQuery('#donate input')[2].src = '<?php echo get_template_directory_uri(); ?>/library/images/DONATE 01.svg';
               var hashTagActive = "";
                 jQuery(".scroll").click(function (event) {
         if(hashTagActive != this.hash) { //this will prevent if the user click several times the same link to freeze the scroll.
@@ -112,8 +125,8 @@
             }
 
             function setSizes() {
-
-                jQuery('#content').css('margin-top', jQuery('.header').height() + jQuery('.navigation').height());
+                if (jQuery('.navigation').css('display') === 'none') navheight = 0; else navheight = jQuery('.navigation').height();
+                jQuery('#content').css('margin-top', jQuery('.header').height() + navheight);
 
                 jQuery('.waves').each(function (index, canvas) {
                     canvas.width = document.body.clientWidth;

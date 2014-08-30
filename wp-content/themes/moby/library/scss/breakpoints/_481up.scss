@@ -32,7 +32,17 @@ NAVIGATION STYLES
 	padding-top: 6em; padding-bottom: 8em;
 }
 
+h1, .h1 {
+	font-size: 2.5em;
+	line-height: 1;
+}
+
+
 .article-header h1 {
+	font-size: 2.5em;
+}
+
+.letter {
 	font-size: 2.5em;
 }
 
@@ -51,6 +61,11 @@ NAVIGATION STYLES
 	}
 #inner-header {
 	width: 538px;
+}
+
+.nyc {
+	width: round(538px * .233);
+	height: round(538px * .233 *.27);
 }
 
 .nav {}
