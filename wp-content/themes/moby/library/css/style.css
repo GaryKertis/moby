@@ -1399,7 +1399,7 @@ HEADER STYLES
   background-size: contain; }
 
 #address {
-  background: url("../images/map marker 01.svg") center center no-repeat;
+  background: url("../images/twitter 01.svg") center center no-repeat;
   background-size: contain; }
 
 #phone {
@@ -1877,7 +1877,7 @@ you can add resource intensive styles.
   .navigation, .map {
     display: block; }
 
-  .contact-image, .about-bottom-row .image {
+  .about-bottom-row .image {
     height: 200px; }
 
   .crew {
@@ -2034,7 +2034,7 @@ you can add resource intensive styles.
   .post, #inner-header, .nav {
     width: 1030px; }
 
-  .contact-image, .about-bottom-row .image {
+  .about-bottom-row .image {
     height: 300px; }
 
   .nyc {
