@@ -11,13 +11,10 @@
 							<div class="post_wrapper">
 							<article id="post" <?php post_class( 'cf' ); ?> role="article">
 
-								<h1 class="h1 entry-title">404</h1>
+								<h1 class="h1 entry-title">Error 404 - The document you are looking for was not found.</h1>
 								
 
 							</article>
-							<div id="whale-<?php the_ID(); ?>" class="whale">
-							
-					</div>
 						</div>
 						</div>
 
