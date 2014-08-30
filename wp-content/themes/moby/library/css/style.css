@@ -1670,6 +1670,20 @@ FOOTER STYLES
 .post .footer {
   margin-top: 0px;
   padding: 0px; }
+  .post .footer a, .post .footer a:visited {
+    color: white;
+    /* on hover */
+    /* on click */
+    /* mobile tap color */ }
+    .post .footer a:hover, .post .footer a:focus, .post .footer a:visited:hover, .post .footer a:visited:focus {
+      color: #f3d03e; }
+    .post .footer a:link, .post .footer a:visited:link {
+      /*
+      this highlights links on iPhones/iPads.
+      so it basically works like the :hover selector
+      for mobile devices.
+      */
+      -webkit-tap-highlight-color: #d0e0d6; }
 
 #waves-1000 {
   position: relative;
