@@ -1368,10 +1368,10 @@ HEADER STYLES
   background-color: white; }
 
 .mywaves:nth-child(1n) .post_wrapper {
-  background-color: #d0e0d6; }
+  background-color: #e8efea; }
 
 .mywaves:nth-child(2n) .post_wrapper {
-  background-color: #b1ccbb; }
+  background-color: #d0e0d6; }
 
 .mywaves {
   margin-bottom: -100px; }
@@ -1420,16 +1420,29 @@ HEADER STYLES
   text-align: right;
   padding-top: 1em; }
 
-#about-image, .about-bottom-row .image {
-  background: url("../images/anchor 01.svg") center center no-repeat; }
+#about-image {
+  background: url("../images/ahab.png") white center center no-repeat;
+  border: 2px solid #00516c; }
+
+.about-bottom-row .image {
+  min-height: 100px;
+  border: 2px solid #00516c; }
+
+.about-bottom-row div:nth-child(1) .image {
+  background: url("../images/book.png") white center center no-repeat;
+  background-size: contain; }
+
+.about-bottom-row div:nth-child(2) .image {
+  background: url("../images/anchor 01.svg") white center center no-repeat;
+  background-size: cover; }
+
+.about-bottom-row div:nth-child(3) .image {
+  background: url("../images/qq.png") white center center no-repeat;
+  background-size: cover; }
 
 .about-bottom-row {
   clear: both;
   padding-top: 4em; }
-
-.about-bottom-row .image {
-  min-height: 100px;
-  background-size: 100% 100%; }
 
 #about-image {
   height: 400px; }
@@ -1537,7 +1550,7 @@ POSTS & CONTENT STYLES
   padding-right: .5em; }
   .post_wrapper footer {
     padding: 1.5em;
-    border-top: 1px solid #e8eeea; }
+    border-top: 1px solid #e8efea; }
     .post_wrapper footer p {
       margin: 0; }
 
@@ -1583,14 +1596,14 @@ POSTS & CONTENT STYLES
   .entry-content tr {
     border-bottom: 1px solid #d0e0d6; }
     .entry-content tr:nth-child(even) {
-      background-color: #e8eeea; }
+      background-color: #e8efea; }
   .entry-content td {
     padding: 7px;
     border-right: 1px solid #d0e0d6; }
     .entry-content td:last-child {
       border-right: 0; }
   .entry-content th {
-    background-color: #e8eeea;
+    background-color: #e8efea;
     border-bottom: 1px solid #d0e0d6;
     border-right: 1px solid #d0e0d6; }
     .entry-content th:last-child {
@@ -1619,7 +1632,7 @@ POSTS & CONTENT STYLES
     height: auto; }
   .entry-content pre {
     background: #2c2e2e;
-    color: #e8eeea;
+    color: #e8efea;
     font-size: 0.9em;
     padding: 1.5em;
     margin: 0 0 1.5em;
@@ -1656,7 +1669,7 @@ FOOTER STYLES
 .footer {
   clear: both;
   background-color: #00516c;
-  color: #e8eeea;
+  color: #e8efea;
   margin-top: -50px; }
 
 .footer .entry-title {

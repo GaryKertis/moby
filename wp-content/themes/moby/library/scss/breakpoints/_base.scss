@@ -183,11 +183,11 @@ HEADER STYLES
 }
 
 .mywaves:nth-child(1n) .post_wrapper {
-	background-color: $gray;
+	background-color: $light-gray;
 }
 
 .mywaves:nth-child(2n) .post_wrapper {
-	background-color: darken($gray, 10%);
+	background-color: $gray;
 }
 
 
@@ -249,18 +249,34 @@ HEADER STYLES
 	padding-top: 1em;
 }
 
-#about-image, .about-bottom-row .image {
-	background: url('../images/anchor 01.svg') center center no-repeat;
-}
-
-.about-bottom-row {
-	clear: both;
-	padding-top: 4em;
+#about-image {
+	background: url('../images/ahab.png') $white center center no-repeat;
+	border: 2px solid $dark-blue;
 }
 
 .about-bottom-row .image {
 	min-height: 100px;
-	background-size: 100% 100%;
+	border: 2px solid $dark-blue;
+}
+
+.about-bottom-row div:nth-child(1) .image {
+		background: url('../images/book.png') $white center center no-repeat;
+		background-size: contain;
+}
+
+.about-bottom-row div:nth-child(2) .image {
+		background: url('../images/anchor 01.svg') $white center center no-repeat;
+		background-size: cover;
+}
+
+.about-bottom-row div:nth-child(3) .image {
+		background: url('../images/qq.png') $white center center no-repeat;
+		background-size: cover;
+} 
+
+.about-bottom-row {
+	clear: both;
+	padding-top: 4em;
 }
 
 #about-image {
